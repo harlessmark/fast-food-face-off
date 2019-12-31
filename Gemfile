@@ -43,4 +43,3 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'nokogiri', '~> 1.10', '>= 1.10.7'
 gem 'httparty', '~> 0.17.3'
 gem 'fast_jsonapi', '~> 1.5'
-gem 'yaml_db'

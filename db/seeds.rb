@@ -166,3 +166,9 @@ end
 logo_scraper
 nutrition_scraper
 food_image_scraper
+
+# Restaurant data stored at
+# https://api.jsonbin.io/b/5e0bbfcf02ce5777b8b583e6
+
+# Food data stored at
+# https://api.jsonbin.io/b/5e0bbf5f02ce5777b8b583b6

@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
+  get '/restaurants', to: 'restaurants#index'
+  get '/foods', to: 'foods#index'
+
   resources :restaurants
   resources :foods
   resources :games
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
