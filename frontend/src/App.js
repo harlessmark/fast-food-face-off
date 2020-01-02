@@ -5,17 +5,21 @@ import Navbar from "./components/Navbar";
 import Instructions from "./components/Instructions";
 import Footer from "./components/Footer";
 
-const newGame = e => {};
-
 class App extends Component {
   state = {
     games: {},
+    currentGame: {
+      score: 0,
+      initials: "",
+      total_calories: 0
+    },
     restaurants: {},
-    foods: {}
+    foods: {},
+    display: ""
   };
 
-  componentDidMount() {
-    // fetches games, restaurants and foods data on page load
+  newGame = e => {
+    e.preventDefault();
     fetch("http://localhost:3000/games")
       .then(response => response.json())
       .then(games =>
@@ -39,13 +43,17 @@ class App extends Component {
           foods
         })
       );
-  }
+
+    this.setState({
+      display: "game on"
+    });
+  };
 
   render() {
     return (
       <div>
         <Navbar />
-        <Instructions clickHandler={newGame} />
+        <Instructions clickHandler={this.newGame} />
         <Footer />
       </div>
     );
