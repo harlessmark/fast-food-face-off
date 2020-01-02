@@ -100,6 +100,8 @@ GEM
     pg (1.2.0)
     puma (3.12.2)
     rack (2.0.8)
+    rack-cors (1.1.1)
+      rack (>= 2.0.0)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rails (6.0.2.1)
@@ -151,9 +153,6 @@ GEM
     websocket-driver (0.7.1)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.4)
-    yaml_db (0.7.0)
-      rails (>= 3.0)
-      rake (>= 0.8.7)
     zeitwerk (2.2.2)
 
 PLATFORMS
@@ -168,11 +167,11 @@ DEPENDENCIES
   nokogiri (~> 1.10, >= 1.10.7)
   pg (>= 0.18, < 2.0)
   puma (~> 3.11)
+  rack-cors
   rails (~> 6.0.0)
   spring
   spring-watcher-listen (~> 2.0.0)
   tzinfo-data
-  yaml_db
 
 RUBY VERSION
    ruby 2.6.3p62
