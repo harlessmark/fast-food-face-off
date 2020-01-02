@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import "./App.css";
 
 import Navbar from "./components/Navbar";
@@ -23,14 +23,39 @@ const newGame = e => {
   });
 };
 
-function App() {
-  return (
-    <div className="App">
-      <Navbar />
-      <Instructions clickHandler={newGame} />
-      <Footer />
-    </div>
-  );
+class App extends Component {
+  state = {
+    restaurants: {},
+    foods: {}
+  };
+
+  componentDidMount() {
+    fetch("https://api.jsonbin.io/b/5e0bbfcf02ce5777b8b583e6")
+      .then(response => response.json())
+      .then(restaurants =>
+        this.setState({
+          restaurants
+        })
+      );
+
+    fetch("https://api.jsonbin.io/b/5e0bbf5f02ce5777b8b583b6")
+      .then(response => response.json())
+      .then(foods =>
+        this.setState({
+          foods
+        })
+      );
+  }
+
+  render() {
+    return (
+      <div>
+        <Navbar />
+        <Instructions clickHandler={newGame} />
+        <Footer />
+      </div>
+    );
+  }
 }
 
 export default App;
