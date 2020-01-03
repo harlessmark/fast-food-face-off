@@ -2,7 +2,7 @@
 
 You're given two random fast food menu items to choose from. Which one do you think has the most calories? Each correct answer gets you one point. Pick the wrong answer then it's GAME OVER. Try to make your way to the leaderboard!
 
-Three web scrapers were used to gather data on fast food restaurants and their foods. One scraper was find the restaurant's logo, the second scraper was to scrape the food name and number of calories, and the last scraper was to match that food's name with their image. Any foods with less than or equal to 400 calories were excluded. Foods with a range of calories (e.g. 250-700 calories) were replaced with their average number. There are a total of 423 food items from 9 restaurants.
+Three web scrapers were used to gather data on fast food restaurants and their foods. One scraper was find the restaurant's logo, the second scraper was to scrape the food name and number of calories, and the last scraper was to match that food's name with their image. Any foods with less than or equal to 400 calories were excluded. Foods with a range of calories (e.g. 250-700 calories) were replaced with their average number. There are a total of [423 food items](https://api.jsonbin.io/b/5e0bbf5f02ce5777b8b583b6) from [9 restaurants](https://api.jsonbin.io/b/5e0bbfcf02ce5777b8b583e6).
 
 ## Installing
 
@@ -36,8 +36,6 @@ npm start
 rails db:migrate
 rails db:seed
 ```
-
-The scraped data can be found [here](https://api.jsonbin.io/b/5e0bbfcf02ce5777b8b583e6) and [here](https://api.jsonbin.io/b/5e0bbf5f02ce5777b8b583b6).
 
 ## Built With
 
