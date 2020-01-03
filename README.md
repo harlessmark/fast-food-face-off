@@ -2,7 +2,7 @@
 
 You're given two random fast food menu items to choose from. Which one do you think has the most calories? Each correct answer gets you one point. Pick the wrong answer then it's GAME OVER. Try to make your way to the leaderboard!
 
-I created three webscrapers to gather data on fast food restaurants and their foods. One scraper was used to get the company's logo, the second scraper was to scrape the food name and number of calories, and the last scraper was to match that food's name with their image using Yahoo Image Search. I excluded all foods that were under 400 calories. Foods with a range of calories (e.g. 250-700 calories) were replaced with their average number.
+I created three webscrapers to gather data on fast food restaurants and their foods. One scraper was used to get the company's logo, the second scraper was to scrape the food name and number of calories, and the last scraper was to match that food's name with their image using Yahoo Image Search. I excluded all foods that were under 400 calories. Foods with a range of calories (e.g. 250-700 calories) were replaced with their average number. There are a total of 423 food items from 9 restaurants.
 
 ## Getting Started
 
