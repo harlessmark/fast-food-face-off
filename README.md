@@ -6,9 +6,9 @@ I created three webscrapers to gather data on fast food restaurants and their fo
 
 ### Installing
 
-Your computer should have the latest version of [Ruby](https://www.ruby-lang.org/en/documentation/installation/) installed.
+Your computer should have the latest version of [Ruby](https://www.ruby-lang.org/en/documentation/installation/) installed then run the following commands:
 
-Rub Bundler
+Run Bundler
 
 ```
 bundle install
@@ -31,6 +31,7 @@ Start the frontend server
 ```
 npm start
 ```
+
 
 [optional] Run the web scraper from the root folder
 ```
