@@ -32,7 +32,6 @@ Start the frontend server
 npm start
 ```
 
-
 [optional] Run the web scraper from the root folder
 ```
 rails db:seed
