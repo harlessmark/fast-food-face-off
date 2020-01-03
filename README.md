@@ -1,4 +1,4 @@
-# Fast Food Face-Off (WIP)
+# Fast Food Face-Off – Work in Progress...
 
 You're given two random fast food menu items to choose from. Which one do you think has the most calories? Each correct answer gets you one point. Pick the wrong answer then it's GAME OVER. Try to make your way to the leaderboard!
 
@@ -47,5 +47,5 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE) f
 
 ## Acknowledgments
 
-* Thanks to [Alex Pugia](https://github.com/jasminnancy) for originally writing the frontend with plain Javascript.
+* Thanks to [Alex Pugia](https://github.com/jasminnancy) for originally writing the frontend in plain Javascript.
 
