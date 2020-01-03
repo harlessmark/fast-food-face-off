@@ -55,4 +55,4 @@ This project is licensed under the [MIT License](LICENSE).
 * Thank you [Alex Pugia](https://github.com/jasminnancy) for originally writing the frontend in plain Javascript.
 * The food data was scraped from [Fast Food Nutrition](https://fastfoodnutrition.org).
 * The restaurant logos are provided by [Clearbit](http://clearbit.com) using their [free logo API](https://clearbit.com/logo). 
-* Scraped data is being hosted at [JSON Bin](http://https://jsonbin.io/). 
+* The scraped data is being hosted at [JSON Bin](http://https://jsonbin.io/). 
