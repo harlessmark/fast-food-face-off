@@ -1,3 +1,8 @@
+* {
+  background-color: #282c34;
+  color: white;
+}
+
 #github-logo {
   position: absolute;
   top: 0;
