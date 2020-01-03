@@ -4,7 +4,7 @@ You're given two random fast food menu items to choose from. Which one do you th
 
 Three web scrapers were used to gather data on fast food restaurants and their foods. One scraper was find the restaurant's logo, the second scraper was to scrape the food name and number of calories, and the last scraper was to match that food's name with their image. Any foods with less than or equal to 400 calories were excluded. Foods with a range of calories (e.g. 250-700 calories) were replaced with their average number. There are a total of 423 food items from 9 restaurants.
 
-### Installing
+## Installing
 
 Your computer should have the latest version of [Ruby](https://www.ruby-lang.org/en/documentation/installation/) installed. Then run the following commands:
 
@@ -33,6 +33,7 @@ npm start
 
 [optional] Run the web scraper from the root folder
 ```
+rails db:migrate
 rails db:seed
 ```
 
