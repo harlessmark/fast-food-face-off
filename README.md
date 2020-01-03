@@ -2,7 +2,7 @@
 
 You're given two random fast food menu items to choose from. Which one do you think has the most calories? Each correct answer gets you one point. Pick the wrong answer then it's GAME OVER. Try to make your way to the leaderboard!
 
-I created three webscrapers to gather data on fast food restaurants and their foods. One scraper was used to get the company's logo, the second scraper was to scrape the food name and number of calories, and the last scraper was to match that food's name with their image using Yahoo Image Search. I excluded all foods that were under 400 calories. Foods with a range of calories (e.g. 250-700 calories) were replaced with their average number. There are a total of 423 food items from 9 restaurants.
+I created three webscrapers to gather data on fast food restaurants and their foods. One scraper was used to get the company's logo, the second scraper was to scrape the food name and number of calories, and the last scraper was to match that food's name with their image. I excluded all foods that were under 400 calories. Foods with a range of calories (e.g. 250-700 calories) were replaced with their average number. There are a total of 423 food items from 9 restaurants.
 
 ## Getting Started
 
@@ -60,23 +60,14 @@ Add additional notes about how to deploy this on a live system
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+* [Ruby](http://www.yahoo.com) - Backend language
+* [React](http://www.yahoo.com) - Javascript frontend framework
+* [Tailwind CSS](https://www.tailwindcss.com) - CSS framework
+* [Nokogiri](https://rometools.github.io/rome/) - Ruby web scraper
 
 ## Versioning
 
 We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
 ## License
 
