@@ -49,7 +49,7 @@ The scraped data can be found [here](https://api.jsonbin.io/b/5e0bbfcf02ce5777b8
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE) file for details.
+This project is licensed under the [MIT License](LICENSE)
 
 ## Acknowledgments
 
