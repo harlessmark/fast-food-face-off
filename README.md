@@ -37,6 +37,8 @@ npm start
 rails db:seed
 ```
 
+The scraped data can be found [here](https://api.jsonbin.io/b/5e0bbfcf02ce5777b8b583e6) and [here](https://api.jsonbin.io/b/5e0bbf5f02ce5777b8b583b6).
+
 ## Built With
 
 * [Ruby](http://www.yahoo.com) - Backend language
@@ -53,4 +55,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE) f
 * Thanks to [Alex Pugia](https://github.com/jasminnancy) for originally writing the frontend in plain Javascript.
 * The food data was scraped from [Fast Food Nutrition](https://fastfoodnutrition.org).
 * Thanks to [Clearbit](http://clearbit.com) and their [free logo API](https://clearbit.com/logo) for providing the restaurant logos.
-
+* Thanks to [JSON Bin](http://https://jsonbin.io/) for hosting the restaurant and foods API.
