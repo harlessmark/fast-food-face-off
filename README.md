@@ -1,4 +1,4 @@
-# Fast Food Face-Off
+# Fast Food Face-Off (WIP)
 
 You're given two random fast food menu items to choose from. Which one do you think has the most calories? Each correct answer gets you one point. Pick the wrong answer then it's GAME OVER. Try to make your way to the leaderboard!
 
