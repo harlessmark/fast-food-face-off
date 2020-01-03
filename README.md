@@ -43,9 +43,9 @@ The scraped data can be found [here](https://api.jsonbin.io/b/5e0bbfcf02ce5777b8
 
 * [Ruby](http://www.yahoo.com) - Backend language
 * [Ruby on Rails](https://rubyonrails.org/) - Ruby web application framework
-* [React](http://www.yahoo.com) - Javascript frontend framework
+* [React](https://reactjs.org/) - Javascript frontend framework
 * [Tailwind CSS](https://www.tailwindcss.com) - CSS framework
-* [Nokogiri](https://rometools.github.io/rome/) - Ruby web scraper
+* [Nokogiri](https://github.com/sparklemotion/nokogiri) - HTML parser
 * [Fast JSON API](https://github.com/Netflix/fast_jsonapi) - Ruby serializer
 
 ## License
