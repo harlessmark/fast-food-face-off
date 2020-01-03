@@ -31,7 +31,7 @@ Start the frontend server
 npm start
 ```
 
-[optional] Run the web scraper from the root folder
+[optional] Run the web scraper from the root folder. This will take several minutes to complete. 
 ```
 rails db:migrate
 rails db:seed
