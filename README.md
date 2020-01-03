@@ -12,7 +12,6 @@ Rub Bundler
 
 ```
 bundle install
-# or just 'bundle'
 ```
 
 Start the backend server
@@ -33,7 +32,7 @@ Start the frontend server
 npm start
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
+[OPTUINAL] Run the web scraper from the root folder
 
 ## Built With
 
