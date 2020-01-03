@@ -6,18 +6,31 @@ I created three webscrapers to gather data on fast food restaurants and their fo
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
+Your computer should have the latest version of [Ruby](https://www.ruby-lang.org/en/documentation/installation/) installed.
 
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
+Rub Bundler
 
 ```
-until finished
+bundle install
+# or just 'bundle'
+```
+
+Start the backend server
+
+```
+rails s
+```
+
+Change directory to /frontend
+
+```
+cd frontend/
+```
+
+Start the frontend server
+
+```
+npm start
 ```
 
 End with an example of getting some data out of the system or using it for a little demo
