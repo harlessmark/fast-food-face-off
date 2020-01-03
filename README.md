@@ -6,10 +6,9 @@ I created three webscrapers to gather data on fast food restaurants and their fo
 
 ### Installing
 
-Your computer should have the latest version of [Ruby](https://www.ruby-lang.org/en/documentation/installation/) installed then run the following commands:
+Your computer should have the latest version of [Ruby](https://www.ruby-lang.org/en/documentation/installation/) installed. Then run the following commands:
 
 Run Bundler
-
 ```
 bundle install
 ```
