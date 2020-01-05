@@ -5,25 +5,45 @@ class Game extends Component {
   state = {
     firstFood: Foods[Math.floor(Math.random() * Foods.length)],
     secondFood: Foods[Math.floor(Math.random() * Foods.length)],
-    mostCalories: "placeholder - either firstFood or secondFood, duh"
+    mostCalories: "placeholder"
   };
 
   componentDidMount() {
-    while (
-      // to check that the two foods' calories are not the same
-      // '!==' will be '===' once this while loop works correctly
+    setTimeout(() => {
+      // checks to see two foods' calories aren't the same
+      while (
+        this.state.firstFood.attributes.calories ===
+        this.state.secondFood.attributes.calories
+      ) {
+        console.log(this.state.firstFood.attributes.calories);
+        console.log(this.state.secondFood.attributes.calories);
+        debugger;
 
-      this.state.firstFood.attributes.calories !==
+        this.setState({
+          firstFood: Foods[Math.floor(Math.random() * Foods.length)]
+        });
+      }
+    }, 500);
+
+    if (
+      this.state.firstFood.attributes.calories >
       this.state.secondFood.attributes.calories
     ) {
-      console.log(this.state.firstFood.attributes.calories);
-      console.log(this.state.secondFood.attributes.calories);
-      debugger;
-      // an infinite loop because the below code doesn't change state at all
-
       this.setState({
-        firstFood: Foods[Math.floor(Math.random() * Foods.length)],
-        secondFood: Foods[Math.floor(Math.random() * Foods.length)]
+        mostCalories: this.state.firstFood
+      });
+    }
+
+    if (
+      this.state.firstFood.attributes.calories >
+      this.state.secondFood.attributes.calories
+    ) {
+      this.setState({
+        mostCalories: this.state.firstFood
+      });
+    } else {
+      this.setState({
+        mostCalories: this.state.secondFood
       });
     }
   }
