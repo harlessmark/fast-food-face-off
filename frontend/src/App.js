@@ -15,8 +15,6 @@ class App extends Component {
       initials: "",
       total_calories: 0
     },
-    restaurants: [],
-    foods: [],
     display: "instructions"
   };
 
@@ -28,22 +26,6 @@ class App extends Component {
       .then(({ data }) =>
         this.setState({
           games: data
-        })
-      );
-
-    fetch("https://api.jsonbin.io/b/5e0bbfcf02ce5777b8b583e6")
-      .then(response => response.json())
-      .then(({ data }) =>
-        this.setState({
-          restaurants: data
-        })
-      );
-
-    fetch("https://api.jsonbin.io/b/5e0bbf5f02ce5777b8b583b6")
-      .then(response => response.json())
-      .then(({ data }) =>
-        this.setState({
-          foods: data
         })
       );
   }
@@ -71,7 +53,6 @@ class App extends Component {
   };
 
   render() {
-    console.log(this.state);
     return (
       <div>
         <Navbar />

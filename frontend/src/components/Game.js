@@ -1,52 +1,34 @@
 import React, { Component } from "react";
+import Foods from "../foods.json";
 
 class Game extends Component {
   state = {
-    firstFood: {},
-    secondFood: {},
-    correctFood: "placeholder - either firstFood or secondFood, duh"
+    firstFood: Foods[Math.floor(Math.random() * Foods.length)],
+    secondFood: Foods[Math.floor(Math.random() * Foods.length)],
+    mostCalories: "placeholder - either firstFood or secondFood, duh"
   };
 
   componentDidMount() {
-    // selects random food from selected restaurants
+    while (
+      // to check that the two foods' calories are not the same
+      // '!==' will be '===' once this while loop works correctly
 
-    // const firstRestaurantID = parseInt(this.state.firstRestaurant.id);
-    // const firstRestaurantFoods = this.props.state.foods.data.filter(function(
-    //   restaurantFoods
-    // ) {
-    //   return restaurantFoods.attributes.restaurant_id === firstRestaurantID;
-    // });
-    //
-    // const secondRestaurantID = parseInt(this.state.secondRestaurant.id);
-    // const secondRestaurantFoods = this.props.state.foods.data.filter(function(
-    //   restaurantFoods
-    // ) {
-    //   return restaurantFoods.attributes.restaurant_id === secondRestaurantID;
-    // });
-    //
-    // this.setState({
-    //   firstFood: Math.floor(Math.random() * firstRestaurantFoods.length),
-    //   secondFood: Math.floor(Math.random() * secondRestaurantFoods.length)
-    // });
+      this.state.firstFood.attributes.calories !==
+      this.state.secondFood.attributes.calories
+    ) {
+      console.log(this.state.firstFood.attributes.calories);
+      console.log(this.state.secondFood.attributes.calories);
+      debugger;
+      // an infinite loop because the below code doesn't change state at all
 
-    const allFoods = this.props.state.foods;
-
-    console.log(allFoods);
-
-    const firstFood = allFoods[Math.floor(Math.random() * allFoods.length)];
-    const secondFood = allFoods[Math.floor(Math.random() * allFoods.length)];
-
-    console.log(firstFood);
-
-    // TODO: firstFood and secondFood shouldn't have the same number of calories
-
-    this.setState({
-      firstFood,
-      secondFood
-    });
+      this.setState({
+        firstFood: Foods[Math.floor(Math.random() * Foods.length)],
+        secondFood: Foods[Math.floor(Math.random() * Foods.length)]
+      });
+    }
   }
 
-  render(props) {
+  render() {
     return <></>;
   }
 }
