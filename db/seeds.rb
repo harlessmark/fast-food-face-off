@@ -8,76 +8,51 @@ Food.destroy_all
   {
     name: "Arby's",
     website: "arbys.com",
-    route: "/arbys",
-    logo: ""
+    route: "/arbys"
   },
   {
     name: "Burger King",
     website: "bk.com",
-    route: "/burger-king",
-    logo: ""
+    route: "/burger-king"
   },
   {
     name: "Chick-Fil-A",
     website: "chick-fil-a.com",
-    route: "/chick-fil-a",
-    logo: ""
+    route: "/chick-fil-a"
   },
   {
     name: "Dairy Queen",
     website: "dairyqueen.com",
-    route: "/dairy-queen",
-    logo: ""
+    route: "/dairy-queen"
   },
   {
     name: "Five Guys",
     website: "fiveguys.com",
-    route: "/five-guys",
-    logo: ""
+    route: "/five-guys"
   },
   {
     name: "KFC",
     website: "kfc.com",
-    route: "/kfc",
-    logo: ""
+    route: "/kfc"
   },
   {
     name: "McDonald's",
     website: "mcdonalds.com",
-    route: "/mcdonalds",
-    logo: ""
+    route: "/mcdonalds"
   },
   {
     name: "Taco Bell",
     website: "tacobell.com",
-    route: "/taco-bell",
-    logo: ""
+    route: "/taco-bell"
   },
   {
     name: "Wendy's",
     website: "wendys.com",
-    route: "/wendys",
-    logo: ""
+    route: "/wendys"
   }
 ]
+
 @food_list = []
-
-def logo_scraper
-  # adds logo from clearbit.com to restaurant list
-
-  url_start = "http://logo.clearbit.com/"
-  url_end = "?size=700"
-
-  @restaurant_list.each do |single_restaurant|
-    logo = url_start + single_restaurant[:website] + url_end
-    single_restaurant[:logo] << logo
-
-    Restaurant.create(
-      name: single_restaurant[:name],
-      logo: single_restaurant[:logo]
-    )
-  end
-end
 
 def nutrition_scraper
   url = "https://fastfoodnutrition.org"
@@ -101,15 +76,33 @@ def nutrition_scraper
         # filters out foods with 400 calories or less
 
         name = food.text.split(" Nutrition")[0]
-        restaurant_id = Restaurant.find_by(name: restaurant[:name]).id
         calories = food.text.split("Facts")[1].split(" calories")[0].to_i
 
         @food_list << {
           image: "",
           calories: calories,
-          restaurant_id: restaurant_id,
-          name: name
+          name: name,
+          restaurant: restaurant[:name],
+          restaurant_logo: ""
         }
+      end
+    end
+  end
+end
+
+def logo_scraper
+  # adds logo from clearbit.com to restaurant list
+
+  url_start = "http://logo.clearbit.com/"
+  url_end = "?size=700"
+
+  @food_list.each do |food|
+
+    @restaurant_list.each do |restaurant|
+      logo = url_start + restaurant[:website] + url_end
+
+      if food[:restaurant] === restaurant[:name]
+        food[:restaurant_logo] << logo
       end
     end
   end
@@ -131,14 +124,13 @@ def food_image_scraper
       new_food_name = food[:name].gsub(" ", "+")
     end
 
-    restaurant_name = Restaurant.find_by(id: food[:restaurant_id])[:name]
 
-    if restaurant_name.include? " "
+    if food[:restaurant].include? " "
       # replaces empty spaces with +
-      restaurant_name = restaurant_name.gsub(" ", "+")
+      food[:restaurant] = food[:restaurant].gsub(" ", "+")
     end
 
-    search_url = start_url + restaurant_name + "+" + new_food_name + end_url
+    search_url = start_url + food[:restaurant] + "+" + new_food_name + end_url
     search_url = search_url.delete("'").delete("\u2122").delete("\u2013").delete("\u2019").delete("\u00AE").delete("\u0303").delete("\u00E9")
     # removes escape characters
 
@@ -154,20 +146,15 @@ def food_image_scraper
       image: food[:image],
       name: food[:name],
       calories: food[:calories],
-      restaurant_id: food[:restaurant_id]
+      restaurant: food[:restaurant],
+      restaurant_logo: food[:restaurant_logo]
     )
 
     counter += 1
-    puts "+#{counter} #{restaurant_name} #{food[:name]}"
+    puts "+#{counter} #{food[:restaurant]} #{food[:name]}"
   end
 end
 
-logo_scraper
 nutrition_scraper
+logo_scraper
 food_image_scraper
-
-# Restaurant data stored at
-# https://api.jsonbin.io/b/5e0bbfcf02ce5777b8b583e6
-
-# Food data stored at
-# https://api.jsonbin.io/b/5e0bbf5f02ce5777b8b583b6
