@@ -2,7 +2,6 @@ require 'nokogiri'
 require 'httparty'
 require 'byebug'
 
-Restaurant.destroy_all
 Food.destroy_all
 
 @restaurant_list = [

@@ -25,25 +25,25 @@ class App extends Component {
 
     fetch("http://localhost:3000/games")
       .then(response => response.json())
-      .then(games =>
+      .then(({ data }) =>
         this.setState({
-          games
+          games: data
         })
       );
 
     fetch("https://api.jsonbin.io/b/5e0bbfcf02ce5777b8b583e6")
       .then(response => response.json())
-      .then(restaurants =>
+      .then(({ data }) =>
         this.setState({
-          restaurants
+          restaurants: data
         })
       );
 
     fetch("https://api.jsonbin.io/b/5e0bbf5f02ce5777b8b583b6")
       .then(response => response.json())
-      .then(foods =>
+      .then(({ data }) =>
         this.setState({
-          foods
+          foods: data
         })
       );
   }

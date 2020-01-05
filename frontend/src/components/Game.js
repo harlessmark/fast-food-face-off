@@ -29,13 +29,14 @@ class Game extends Component {
     //   secondFood: Math.floor(Math.random() * secondRestaurantFoods.length)
     // });
 
-    const allFoods = this.props.state.foods.data;
+    const allFoods = this.props.state.foods;
 
     console.log(allFoods);
-    debugger;
 
     const firstFood = allFoods[Math.floor(Math.random() * allFoods.length)];
     const secondFood = allFoods[Math.floor(Math.random() * allFoods.length)];
+
+    console.log(firstFood);
 
     // TODO: firstFood and secondFood shouldn't have the same number of calories
 
