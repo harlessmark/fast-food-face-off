@@ -36,7 +36,7 @@
     "id": "4",
     "type": "food",
     "attributes": {
-      "image": "https://s.yimg.com/lq/i/yahoo.gif",
+      "image": "https://cds.arbys.com/assets/product_item/BaconBrisketBNC_18_tile_Mobile_768x640.jpg",
       "name": "Bacon Beef 'n Cheddar",
       "calories": 520,
       "restaurant": "Arby's",
@@ -91,7 +91,7 @@
     "id": "9",
     "type": "food",
     "attributes": {
-      "image": "https://s.yimg.com/lq/i/yahoo.gif",
+      "image": "http://drmarbys.com/wp-content/uploads/2019/09/BeerCheeseTripleStack_19_tile_Desktop_1024x557.jpg",
       "name": "Beer Cheese Triple Stack",
       "calories": 710,
       "restaurant": "Arby's",
@@ -113,7 +113,7 @@
     "id": "11",
     "type": "food",
     "attributes": {
-      "image": "https://s.yimg.com/lq/i/yahoo.gif",
+      "image": "https://fastfoodnutrition.org/item-photos/400x333/6863_s.jpg",
       "name": "Bourbon BBQ Brisket Sandwich",
       "calories": 650,
       "restaurant": "Arby's",
@@ -124,7 +124,7 @@
     "id": "12",
     "type": "food",
     "attributes": {
-      "image": "https://s.yimg.com/lq/i/yahoo.gif",
+      "image": "https://cdn0.wideopeneats.com/wp-content/uploads/2017/08/1024x557_TurkeyBourbonBcn.jpg",
       "name": "Bourbon BBQ Turkey Sandwich",
       "calories": 510,
       "restaurant": "Arby's",
@@ -147,7 +147,7 @@
     "type": "food",
     "attributes": {
       "image": "https://tse2.mm.bing.net/th?id=OIP.C6iNbjG6pcYhAOdcNda_dgHaEB",
-      "name": "Buttermilk Chicken Bacon \u0026 Swiss",
+      "name": "Buttermilk Chicken Bacon Swiss",
       "calories": 610,
       "restaurant": "Arby's",
       "restaurant_logo": "http://logo.clearbit.com/arbys.com?size=700"
@@ -180,7 +180,7 @@
     "type": "food",
     "attributes": {
       "image": "https://tse2.mm.bing.net/th?id=OIP.7GLvtb2Xq_IHutA3om0DIgHaFf",
-      "name": "Chicken Bacon \u0026 Swiss – Roast",
+      "name": "Chicken Bacon Swiss – Roast",
       "calories": 480,
       "restaurant": "Arby's",
       "restaurant_logo": "http://logo.clearbit.com/arbys.com?size=700"
@@ -202,7 +202,7 @@
     "type": "food",
     "attributes": {
       "image": "https://tse2.mm.bing.net/th?id=OIP._pMwvPfks7q-ZheWRkjQ0gHaEv",
-      "name": "Classic French Dip \u0026 Swiss/Au Jus",
+      "name": "Classic French Dip Swiss/Au Jus",
       "calories": 540,
       "restaurant": "Arby's",
       "restaurant_logo": "http://logo.clearbit.com/arbys.com?size=700"
@@ -256,7 +256,7 @@
     "id": "24",
     "type": "food",
     "attributes": {
-      "image": "https://s.yimg.com/lq/i/yahoo.gif",
+      "image": "https://cds.arbys.com/assets/product_item/GarilcButterBaconPetiteFilet_19_tile_Mobile_768x640.jpg",
       "name": "Garlic Butter Steak Sandwich",
       "calories": 520,
       "restaurant": "Arby's",
@@ -289,7 +289,7 @@
     "id": "27",
     "type": "food",
     "attributes": {
-      "image": "https://s.yimg.com/lq/i/yahoo.gif",
+      "image": "https://cds.arbys.com/assets/product_item/HalfLbBnC_18_tile_Mobile_768x640.jpg",
       "name": "Half Pound Beef 'n Cheddar Sandwich",
       "calories": 740,
       "restaurant": "Arby's",
@@ -301,7 +301,7 @@
     "type": "food",
     "attributes": {
       "image": "https://tse4.mm.bing.net/th?id=OIP.k1YqIWWgfGSlhTTwywO8dgHaEB",
-      "name": "Half Pound French Dip \u0026 Swiss",
+      "name": "Half Pound French Dip Swiss",
       "calories": 740,
       "restaurant": "Arby's",
       "restaurant_logo": "http://logo.clearbit.com/arbys.com?size=700"
@@ -322,7 +322,7 @@
     "id": "30",
     "type": "food",
     "attributes": {
-      "image": "https://s.yimg.com/lq/i/yahoo.gif",
+      "image": "https://cds.arbys.com/assets/product_item/KH-FishDeluxe_19_tile_Mobile_768x640.jpg",
       "name": "KING'S HAWAIIAN Fish Deluxe Sandwich",
       "calories": 690,
       "restaurant": "Arby's",
@@ -366,7 +366,7 @@
     "id": "34",
     "type": "food",
     "attributes": {
-      "image": "https://s.yimg.com/lq/i/yahoo.gif",
+      "image": "https://cds.arbys.com/assets/product_item/GrandTurkey_18_tile_Mobile_768x640.jpg",
       "name": "Roast Chicken Club",
       "calories": 460,
       "restaurant": "Arby's",
@@ -378,7 +378,7 @@
     "type": "food",
     "attributes": {
       "image": "https://tse1.mm.bing.net/th?id=OIP.OV3BeIIYMNzQR_7_ot4sfQHaEB",
-      "name": "Roast Turkey \u0026 Swiss Sandwich",
+      "name": "Roast Turkey Swiss Sandwich",
       "calories": 710,
       "restaurant": "Arby's",
       "restaurant_logo": "http://logo.clearbit.com/arbys.com?size=700"
@@ -389,7 +389,7 @@
     "type": "food",
     "attributes": {
       "image": "https://tse1.mm.bing.net/th?id=OIP.OV3BeIIYMNzQR_7_ot4sfQHaEB",
-      "name": "Roast Turkey \u0026 Swiss Wrap",
+      "name": "Roast Turkey Swiss Wrap",
       "calories": 520,
       "restaurant": "Arby's",
       "restaurant_logo": "http://logo.clearbit.com/arbys.com?size=700"
@@ -400,7 +400,7 @@
     "type": "food",
     "attributes": {
       "image": "https://tse2.mm.bing.net/th?id=OIP.s7RsHNnuZqe3ZNlZ28kkvwHaFj",
-      "name": "Roast Turkey, Ranch \u0026 Bacon Sandwich",
+      "name": "Roast Turkey, Ranch Bacon Sandwich",
       "calories": 800,
       "restaurant": "Arby's",
       "restaurant_logo": "http://logo.clearbit.com/arbys.com?size=700"
@@ -411,7 +411,7 @@
     "type": "food",
     "attributes": {
       "image": "https://tse2.mm.bing.net/th?id=OIP.s7RsHNnuZqe3ZNlZ28kkvwHaFj",
-      "name": "Roast Turkey, Ranch \u0026 Bacon Wrap",
+      "name": "Roast Turkey, Ranch Bacon Wrap",
       "calories": 620,
       "restaurant": "Arby's",
       "restaurant_logo": "http://logo.clearbit.com/arbys.com?size=700"
@@ -433,7 +433,7 @@
     "type": "food",
     "attributes": {
       "image": "https://tse3.mm.bing.net/th?id=OIP.HJZnfCsG391-xg-j8GWHCQHaEK",
-      "name": "Steak \u0026 Bacon Melt Sandwich",
+      "name": "Steak Bacon Melt Sandwich",
       "calories": 640,
       "restaurant": "Arby's",
       "restaurant_logo": "http://logo.clearbit.com/arbys.com?size=700"
@@ -477,7 +477,7 @@
     "type": "food",
     "attributes": {
       "image": "https://tse1.mm.bing.net/th?id=OIP.CUg7q--sLyIq3SV-Gph7qgAAAA",
-      "name": "Bacon, Egg \u0026 Cheese Biscuit",
+      "name": "Bacon, Egg Cheese Biscuit",
       "calories": 480,
       "restaurant": "Arby's",
       "restaurant_logo": "http://logo.clearbit.com/arbys.com?size=700"
@@ -488,7 +488,7 @@
     "type": "food",
     "attributes": {
       "image": "https://tse1.mm.bing.net/th?id=OIP.CUg7q--sLyIq3SV-Gph7qgAAAA",
-      "name": "Bacon, Egg \u0026 Cheese Croissant",
+      "name": "Bacon, Egg Cheese Croissant",
       "calories": 440,
       "restaurant": "Arby's",
       "restaurant_logo": "http://logo.clearbit.com/arbys.com?size=700"
@@ -498,8 +498,8 @@
     "id": "46",
     "type": "food",
     "attributes": {
-      "image": "https://s.yimg.com/lq/i/yahoo.gif",
-      "name": "Bacon, Egg \u0026 Cheese Sourdough",
+      "image": "https://1.bp.blogspot.com/-Iwxz0kKW0gY/XPT6viYSRHI/AAAAAAABF0M/_l8pLbJGCKAX-43UwEs8FP1xIAaObAH_gCLcBGAs/s1600/burger-king-bacon-egg-french-toast-sandwich.png",
+      "name": "Bacon, Egg Cheese Sourdough",
       "calories": 490,
       "restaurant": "Arby's",
       "restaurant_logo": "http://logo.clearbit.com/arbys.com?size=700"
@@ -510,7 +510,7 @@
     "type": "food",
     "attributes": {
       "image": "https://tse1.mm.bing.net/th?id=OIP.CUg7q--sLyIq3SV-Gph7qgAAAA",
-      "name": "Bacon, Egg \u0026 Cheese Wrap",
+      "name": "Bacon, Egg Cheese Wrap",
       "calories": 500,
       "restaurant": "Arby's",
       "restaurant_logo": "http://logo.clearbit.com/arbys.com?size=700"
@@ -521,7 +521,7 @@
     "type": "food",
     "attributes": {
       "image": "https://tse3.mm.bing.net/th?id=OIP.rRpb9VRo3recQ4W2Gp32TwHaGJ",
-      "name": "Ham, Egg \u0026 Cheese Biscuit",
+      "name": "Ham, Egg Cheese Biscuit",
       "calories": 470,
       "restaurant": "Arby's",
       "restaurant_logo": "http://logo.clearbit.com/arbys.com?size=700"
@@ -532,7 +532,7 @@
     "type": "food",
     "attributes": {
       "image": "https://tse3.mm.bing.net/th?id=OIP.rRpb9VRo3recQ4W2Gp32TwHaGJ",
-      "name": "Ham, Egg \u0026 Cheese Croissant",
+      "name": "Ham, Egg Cheese Croissant",
       "calories": 420,
       "restaurant": "Arby's",
       "restaurant_logo": "http://logo.clearbit.com/arbys.com?size=700"
@@ -543,7 +543,7 @@
     "type": "food",
     "attributes": {
       "image": "https://tse3.mm.bing.net/th?id=OIP.rRpb9VRo3recQ4W2Gp32TwHaGJ",
-      "name": "Ham, Egg \u0026 Cheese Sourdough",
+      "name": "Ham, Egg Cheese Sourdough",
       "calories": 470,
       "restaurant": "Arby's",
       "restaurant_logo": "http://logo.clearbit.com/arbys.com?size=700"
@@ -554,7 +554,7 @@
     "type": "food",
     "attributes": {
       "image": "https://tse3.mm.bing.net/th?id=OIP.rRpb9VRo3recQ4W2Gp32TwHaGJ",
-      "name": "Ham, Egg \u0026 Cheese Wrap",
+      "name": "Ham, Egg Cheese Wrap",
       "calories": 440,
       "restaurant": "Arby's",
       "restaurant_logo": "http://logo.clearbit.com/arbys.com?size=700"
@@ -565,7 +565,7 @@
     "type": "food",
     "attributes": {
       "image": "https://tse3.mm.bing.net/th?id=OIP.84hx4uyq_vpwseJWqQnZpgHaE7",
-      "name": "Sausage \u0026 Cheese Croissant",
+      "name": "Sausage Cheese Croissant",
       "calories": 490,
       "restaurant": "Arby's",
       "restaurant_logo": "http://logo.clearbit.com/arbys.com?size=700"
@@ -598,7 +598,7 @@
     "type": "food",
     "attributes": {
       "image": "https://tse3.mm.bing.net/th?id=OIP.84hx4uyq_vpwseJWqQnZpgHaE7",
-      "name": "Sausage, Egg \u0026 Cheese Biscuit",
+      "name": "Sausage, Egg Cheese Biscuit",
       "calories": 640,
       "restaurant": "Arby's",
       "restaurant_logo": "http://logo.clearbit.com/arbys.com?size=700"
@@ -609,7 +609,7 @@
     "type": "food",
     "attributes": {
       "image": "https://tse3.mm.bing.net/th?id=OIP.84hx4uyq_vpwseJWqQnZpgHaE7",
-      "name": "Sausage, Egg \u0026 Cheese Croissant",
+      "name": "Sausage, Egg Cheese Croissant",
       "calories": 590,
       "restaurant": "Arby's",
       "restaurant_logo": "http://logo.clearbit.com/arbys.com?size=700"
@@ -620,7 +620,7 @@
     "type": "food",
     "attributes": {
       "image": "https://tse3.mm.bing.net/th?id=OIP.84hx4uyq_vpwseJWqQnZpgHaE7",
-      "name": "Sausage, Egg \u0026 Cheese Sourdough",
+      "name": "Sausage, Egg Cheese Sourdough",
       "calories": 640,
       "restaurant": "Arby's",
       "restaurant_logo": "http://logo.clearbit.com/arbys.com?size=700"
@@ -631,7 +631,7 @@
     "type": "food",
     "attributes": {
       "image": "https://tse3.mm.bing.net/th?id=OIP.84hx4uyq_vpwseJWqQnZpgHaE7",
-      "name": "Sausage, Egg \u0026 Cheese Wrap",
+      "name": "Sausage, Egg Cheese Wrap",
       "calories": 630,
       "restaurant": "Arby's",
       "restaurant_logo": "http://logo.clearbit.com/arbys.com?size=700"
@@ -675,7 +675,7 @@
     "type": "food",
     "attributes": {
       "image": "https://tse2.mm.bing.net/th?id=OIP.CoW_PxQmSWW0ZoSeLJeXpAHaFj",
-      "name": "Salted Caramel \u0026 Chocolate Cookie",
+      "name": "Salted Caramel Chocolate Cookie",
       "calories": 430,
       "restaurant": "Arby's",
       "restaurant_logo": "http://logo.clearbit.com/arbys.com?size=700"
@@ -741,7 +741,7 @@
     "type": "food",
     "attributes": {
       "image": "https://tse3.mm.bing.net/th?id=OIP.iQKxQOY0LEHxykh9A_jh4AHaGA",
-      "name": "Bacon \u0026 Cheese Whopper",
+      "name": "Bacon Cheese Whopper",
       "calories": 790,
       "restaurant": "Burger+King",
       "restaurant_logo": "http://logo.clearbit.com/bk.com?size=700"
@@ -751,7 +751,7 @@
     "id": "69",
     "type": "food",
     "attributes": {
-      "image": "https://tse3.mm.bing.net/th?id=OIP.iQKxQOY0LEHxykh9A_jh4AHaGA",
+      "image": "https://www.chewboom.com/wp-content/uploads/2019/09/Burger-King-Unveils-New-Pretzel-Bacon-King-Sandwich-678x381.jpg",
       "name": "Bacon King",
       "calories": 1150,
       "restaurant": "Burger+King",
@@ -972,7 +972,7 @@
     "type": "food",
     "attributes": {
       "image": "https://tse3.mm.bing.net/th?id=OIP.RPp3vADEIZVfwUM4foMmCgHaFa",
-      "name": "Bacon, Egg \u0026 Cheese Biscuit",
+      "name": "Bacon, Egg Cheese Biscuit",
       "calories": 470,
       "restaurant": "Burger+King",
       "restaurant_logo": "http://logo.clearbit.com/bk.com?size=700"
@@ -994,7 +994,7 @@
     "type": "food",
     "attributes": {
       "image": "https://tse3.mm.bing.net/th?id=OIP.7O5c0K0mMadUA07uziSNOAHaH_",
-      "name": "CROISSAN'WICH Sausage, Egg \u0026 Cheese",
+      "name": "CROISSAN'WICH Sausage, Egg Cheese",
       "calories": 490,
       "restaurant": "Burger+King",
       "restaurant_logo": "http://logo.clearbit.com/bk.com?size=700"
@@ -1005,7 +1005,7 @@
     "type": "food",
     "attributes": {
       "image": "https://tse2.mm.bing.net/th?id=OIP.97T-vMVVBajd5gQFhPSPqAHaH_",
-      "name": "DOUBLE CROISSAN'WICH w/ Bacon, Egg, \u0026 Cheese",
+      "name": "DOUBLE CROISSAN'WICH w/ Bacon, Egg, Cheese",
       "calories": 490,
       "restaurant": "Burger+King",
       "restaurant_logo": "http://logo.clearbit.com/bk.com?size=700"
@@ -1016,7 +1016,7 @@
     "type": "food",
     "attributes": {
       "image": "https://tse1.mm.bing.net/th?id=OIP.hNrx4Tm3fZ-AHaEpRUzvHQHaH_",
-      "name": "DOUBLE CROISSAN'WICH w/ Ham, Sausage, Egg, \u0026 Cheese",
+      "name": "DOUBLE CROISSAN'WICH w/ Ham, Sausage, Egg, Cheese",
       "calories": 570,
       "restaurant": "Burger+King",
       "restaurant_logo": "http://logo.clearbit.com/bk.com?size=700"
@@ -1027,7 +1027,7 @@
     "type": "food",
     "attributes": {
       "image": "https://s.yimg.com/lq/i/yahoo.gif",
-      "name": "DOUBLE CROISSAN'WICH w/ Sausage, Bacon, Egg, \u0026 Cheese",
+      "name": "DOUBLE CROISSAN'WICH w/ Sausage, Bacon, Egg, Cheese",
       "calories": 570,
       "restaurant": "Burger+King",
       "restaurant_logo": "http://logo.clearbit.com/bk.com?size=700"
@@ -1038,7 +1038,7 @@
     "type": "food",
     "attributes": {
       "image": "https://tse1.mm.bing.net/th?id=OIP.-JmvqMCzkGRtMp71yNRnPQHaH_",
-      "name": "DOUBLE CROISSAN'WICH w/ Sausage, Egg, \u0026 Cheese",
+      "name": "DOUBLE CROISSAN'WICH w/ Sausage, Egg, Cheese",
       "calories": 700,
       "restaurant": "Burger+King",
       "restaurant_logo": "http://logo.clearbit.com/bk.com?size=700"
@@ -1082,7 +1082,7 @@
     "type": "food",
     "attributes": {
       "image": "https://tse2.mm.bing.net/th?id=OIP.9M5jlf4gKhdsT57DsWvycAHaH_",
-      "name": "Ham, Egg, \u0026 Cheese Biscuit",
+      "name": "Ham, Egg, Cheese Biscuit",
       "calories": 420,
       "restaurant": "Burger+King",
       "restaurant_logo": "http://logo.clearbit.com/bk.com?size=700"
@@ -1104,7 +1104,7 @@
     "type": "food",
     "attributes": {
       "image": "https://tse4.mm.bing.net/th?id=OIP.ttzHPEF4psvuAQEoMblcrwHaIA",
-      "name": "Pancake Platter w/ Sausage \u0026 1 oz Breakfast Syrup",
+      "name": "Pancake Platter w/ Sausage 1 oz Breakfast Syrup",
       "calories": 670,
       "restaurant": "Burger+King",
       "restaurant_logo": "http://logo.clearbit.com/bk.com?size=700"
@@ -1126,7 +1126,7 @@
     "type": "food",
     "attributes": {
       "image": "https://tse3.mm.bing.net/th?id=OIP.7O5c0K0mMadUA07uziSNOAHaH_",
-      "name": "Sausage, Egg, \u0026 Cheese Biscuit",
+      "name": "Sausage, Egg, Cheese Biscuit",
       "calories": 570,
       "restaurant": "Burger+King",
       "restaurant_logo": "http://logo.clearbit.com/bk.com?size=700"
@@ -1335,7 +1335,7 @@
     "type": "food",
     "attributes": {
       "image": "https://s.yimg.com/lq/i/yahoo.gif",
-      "name": "M\u0026M's Shake",
+      "name": "M's Shake",
       "calories": 780,
       "restaurant": "Burger+King",
       "restaurant_logo": "http://logo.clearbit.com/bk.com?size=700"
@@ -1489,7 +1489,7 @@
     "type": "food",
     "attributes": {
       "image": "https://tse4.mm.bing.net/th?id=OIP.NSY1UBYL9Mz49i4W2FDD-gHaEK",
-      "name": "Bacon, Egg \u0026 Cheese Biscuit",
+      "name": "Bacon, Egg Cheese Biscuit",
       "calories": 500,
       "restaurant": "Chick-Fil-A",
       "restaurant_logo": "http://logo.clearbit.com/chick-fil-a.com?size=700"
@@ -1511,7 +1511,7 @@
     "type": "food",
     "attributes": {
       "image": "https://tse2.mm.bing.net/th?id=OIP.ydMAG3FNzEflICm58hKKwQHaFd",
-      "name": "Chicken, Egg \u0026 Cheese Bagel",
+      "name": "Chicken, Egg Cheese Bagel",
       "calories": 460,
       "restaurant": "Chick-Fil-A",
       "restaurant_logo": "http://logo.clearbit.com/chick-fil-a.com?size=700"
@@ -1577,7 +1577,7 @@
     "type": "food",
     "attributes": {
       "image": "https://tse3.mm.bing.net/th?id=OIP.RyyJQrUfIdJ5RQqcSOH1HAHaFj",
-      "name": "Cookies \u0026 Cream Milkshake",
+      "name": "Cookies Cream Milkshake",
       "calories": 610,
       "restaurant": "Chick-Fil-A",
       "restaurant_logo": "http://logo.clearbit.com/chick-fil-a.com?size=700"
@@ -1841,7 +1841,7 @@
     "type": "food",
     "attributes": {
       "image": "https://tse2.mm.bing.net/th?id=OIP.9HfUVFoaoiQEttrBnGmcTQHaEU",
-      "name": "Chicken \u0026 Waffles Basket",
+      "name": "Chicken Waffles Basket",
       "calories": 1230,
       "restaurant": "Dairy+Queen",
       "restaurant_logo": "http://logo.clearbit.com/dairyqueen.com?size=700"
@@ -1874,7 +1874,7 @@
     "type": "food",
     "attributes": {
       "image": "https://tse3.mm.bing.net/th?id=OIP.fCxuHpsTF1OTImcUtxP_OgHaFI",
-      "name": "Biscuits \u0026 Gravy",
+      "name": "Biscuits Gravy",
       "calories": 730,
       "restaurant": "Dairy+Queen",
       "restaurant_logo": "http://logo.clearbit.com/dairyqueen.com?size=700"
@@ -2710,7 +2710,7 @@
     "type": "food",
     "attributes": {
       "image": "https://tse4.mm.bing.net/th?id=OIP.RxJJDFk3_UTIRi8t0e-MvgHaEK",
-      "name": "Nashville Hot Chicken \u0026 Waffle Sandwich",
+      "name": "Nashville Hot Chicken Waffle Sandwich",
       "calories": 1010,
       "restaurant": "KFC",
       "restaurant_logo": "http://logo.clearbit.com/kfc.com?size=700"
@@ -2809,7 +2809,7 @@
     "type": "food",
     "attributes": {
       "image": "https://s.yimg.com/lq/i/yahoo.gif",
-      "name": "Mac \u0026 Cheese Bowl",
+      "name": "Mac Cheese Bowl",
       "calories": 660,
       "restaurant": "KFC",
       "restaurant_logo": "http://logo.clearbit.com/kfc.com?size=700"
@@ -2831,7 +2831,7 @@
     "type": "food",
     "attributes": {
       "image": "https://tse2.mm.bing.net/th?id=OIP.qbgAoMR4ag7aX802XUoyIQHaEK",
-      "name": "Spicy Mac \u0026 Cheese Bowl",
+      "name": "Spicy Mac Cheese Bowl",
       "calories": 790,
       "restaurant": "KFC",
       "restaurant_logo": "http://logo.clearbit.com/kfc.com?size=700"
@@ -2842,7 +2842,7 @@
     "type": "food",
     "attributes": {
       "image": "https://tse1.mm.bing.net/th?id=OIP.34Y0OOoCnEkkOEvtmFolGAHaEK",
-      "name": "Chicken \u0026 Waffles Sandwich",
+      "name": "Chicken Waffles Sandwich",
       "calories": 1020,
       "restaurant": "KFC",
       "restaurant_logo": "http://logo.clearbit.com/kfc.com?size=700"
@@ -3084,7 +3084,7 @@
     "type": "food",
     "attributes": {
       "image": "https://tse4.mm.bing.net/th?id=OIP.MkN6Uqv9750VifhXP9O39gHaFG",
-      "name": "Bacon, Egg \u0026 Cheese Bagel",
+      "name": "Bacon, Egg Cheese Bagel",
       "calories": 550,
       "restaurant": "McDonald's",
       "restaurant_logo": "http://logo.clearbit.com/mcdonalds.com?size=700"
@@ -3095,7 +3095,7 @@
     "type": "food",
     "attributes": {
       "image": "https://tse4.mm.bing.net/th?id=OIP.MkN6Uqv9750VifhXP9O39gHaFG",
-      "name": "Bacon, Egg \u0026 Cheese Biscuit",
+      "name": "Bacon, Egg Cheese Biscuit",
       "calories": 450,
       "restaurant": "McDonald's",
       "restaurant_logo": "http://logo.clearbit.com/mcdonalds.com?size=700"
@@ -3106,7 +3106,7 @@
     "type": "food",
     "attributes": {
       "image": "https://tse4.mm.bing.net/th?id=OIP.MkN6Uqv9750VifhXP9O39gHaFG",
-      "name": "Bacon, Egg \u0026 Cheese McGriddles",
+      "name": "Bacon, Egg Cheese McGriddles",
       "calories": 420,
       "restaurant": "McDonald's",
       "restaurant_logo": "http://logo.clearbit.com/mcdonalds.com?size=700"
@@ -3216,7 +3216,7 @@
     "type": "food",
     "attributes": {
       "image": "https://tse4.mm.bing.net/th?id=OIP.Fjv-aA1G4GJECZEK2Nto-wHaLG",
-      "name": "Sausage, Egg \u0026 Cheese McGriddles",
+      "name": "Sausage, Egg Cheese McGriddles",
       "calories": 550,
       "restaurant": "McDonald's",
       "restaurant_logo": "http://logo.clearbit.com/mcdonalds.com?size=700"
@@ -3260,7 +3260,7 @@
     "type": "food",
     "attributes": {
       "image": "https://tse3.mm.bing.net/th?id=OIP.3-PdgOultR0snjsK7YVM9gHaHZ",
-      "name": "McFlurry w/ M\u0026M's Candies",
+      "name": "McFlurry w/ M's Candies",
       "calories": 420,
       "restaurant": "McDonald's",
       "restaurant_logo": "http://logo.clearbit.com/mcdonalds.com?size=700"
@@ -4591,7 +4591,7 @@
     "type": "food",
     "attributes": {
       "image": "https://tse1.mm.bing.net/th?id=OIP.pLGWnHj7ka2U1kz5Awca_QHaFj",
-      "name": "Mornin' Melt Panini with Egg \u0026 Cheese",
+      "name": "Mornin' Melt Panini with Egg Cheese",
       "calories": 450,
       "restaurant": "Wendy's",
       "restaurant_logo": "http://logo.clearbit.com/wendys.com?size=700"
@@ -4624,7 +4624,7 @@
     "type": "food",
     "attributes": {
       "image": "https://tse3.mm.bing.net/th?id=OIP.Kt4sAhY-NT9pHv13qM2wAgHaFj",
-      "name": "Sausage Gravy \u0026 Biscuit",
+      "name": "Sausage Gravy Biscuit",
       "calories": 460,
       "restaurant": "Wendy's",
       "restaurant_logo": "http://logo.clearbit.com/wendys.com?size=700"
@@ -4668,7 +4668,7 @@
     "type": "food",
     "attributes": {
       "image": "https://tse3.mm.bing.net/th?id=OIP.hnONqoSRizhB9NgIVK7G-wHaFj",
-      "name": "Bacon \u0026 Cheese Baked Potato",
+      "name": "Bacon Cheese Baked Potato",
       "calories": 540,
       "restaurant": "Wendy's",
       "restaurant_logo": "http://logo.clearbit.com/wendys.com?size=700"
@@ -4701,7 +4701,7 @@
     "type": "food",
     "attributes": {
       "image": "https://tse1.mm.bing.net/th?id=OIP.1liwcaoA_xkLZIGZtXfHdAHaHa",
-      "name": "Broccoli \u0026 Cheese Baked Potato",
+      "name": "Broccoli Cheese Baked Potato",
       "calories": 440,
       "restaurant": "Wendy's",
       "restaurant_logo": "http://logo.clearbit.com/wendys.com?size=700"

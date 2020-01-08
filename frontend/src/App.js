@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
+import Foods from "./foods.json";
 
 import Navbar from "./components/Navbar";
 import logo from "./logo.svg";
@@ -8,26 +9,40 @@ import Game from "./components/Game";
 import Footer from "./components/Footer";
 
 class App extends Component {
-  state = {
-    games: [],
-    currentGame: {
-      score: 0,
-      initials: "",
-      total_calories: 0
-    },
-    display: "instructions"
-  };
+  constructor(props) {
+    const firstFood = Foods[Math.floor(Math.random() * Foods.length)];
 
-  componentDidMount() {
-    // fetches games, restaurants and foods data on page load
-    fetch("http://localhost:3000/games")
-      .then(response => response.json())
-      .then(({ data }) =>
-        this.setState({
-          games: data
-        })
-      );
+    const filteredList = Foods.filter(
+      foodItem => foodItem.attributes.calories !== firstFood.attributes.calories
+    );
+
+    const secondFood =
+      filteredList[Math.floor(Math.random() * filteredList.length)];
+
+    let mostCalories = {};
+
+    if (firstFood.attributes.calories > secondFood.attributes.calories) {
+      mostCalories = firstFood;
+    } else {
+      mostCalories = secondFood;
+    }
+
+    super(props);
+    this.state = {
+      firstFood,
+      secondFood,
+      mostCalories,
+      games: [],
+      currentGame: {
+        score: 0,
+        initials: "",
+        total_calories: 0
+      },
+      display: "instructions"
+    };
   }
+
+  // TODO: Does games API need to be fetched here?
 
   newGame = e => {
     e.preventDefault();
@@ -51,6 +66,24 @@ class App extends Component {
     });
   };
 
+  clickHandler = e => {
+    if (e.target.src === this.state.mostCalories.attributes.image) {
+      this.setState({
+        currentGame: {
+          score: this.state.currentGame.score + 1,
+          initials: "",
+          total_calories:
+            this.state.currentGame.total_calories +
+            this.state.mostCalories.attributes.calories
+        }
+      });
+      console.log("correct!");
+    } else {
+      console.log("GAME OVER");
+      // change this.state.display to "game over"
+    }
+  };
+
   render() {
     return (
       <div>
@@ -61,7 +94,9 @@ class App extends Component {
           <Instructions clickHandler={this.newGame} />
         ) : null}
 
-        {this.state.display === "game on" ? <Game state={this.state} /> : null}
+        {this.state.display === "game on" ? (
+          <Game state={this.state} clickHandler={this.clickHandler} />
+        ) : null}
 
         <Footer />
       </div>
