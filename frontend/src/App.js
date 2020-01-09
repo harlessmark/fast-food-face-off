@@ -9,6 +9,8 @@ import Game from "./components/Game";
 import Footer from "./components/Footer";
 
 class App extends Component {
+  // TODO: Brady said the super is wrong
+
   constructor(props) {
     const firstFood = Foods[Math.floor(Math.random() * Foods.length)];
 
@@ -41,8 +43,6 @@ class App extends Component {
       display: "instructions"
     };
   }
-
-  // TODO: Does games API need to be fetched here?
 
   newGame = e => {
     e.preventDefault();
