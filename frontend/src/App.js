@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
 import Foods from "./foods.json";
-
 import Navbar from "./components/Navbar";
 import logo from "./logo.svg";
 import Instructions from "./components/Instructions";
@@ -9,9 +8,8 @@ import Game from "./components/Game";
 import Footer from "./components/Footer";
 
 class App extends Component {
-  // TODO: Brady said the super is wrong
-
   constructor(props) {
+    super(props);
     const firstFood = Foods[Math.floor(Math.random() * Foods.length)];
 
     const filteredList = Foods.filter(
@@ -21,15 +19,11 @@ class App extends Component {
     const secondFood =
       filteredList[Math.floor(Math.random() * filteredList.length)];
 
-    let mostCalories = {};
+    const mostCalories =
+      firstFood.attributes.calories > secondFood.attributes.calories
+        ? firstFood
+        : secondFood;
 
-    if (firstFood.attributes.calories > secondFood.attributes.calories) {
-      mostCalories = firstFood;
-    } else {
-      mostCalories = secondFood;
-    }
-
-    super(props);
     this.state = {
       firstFood,
       secondFood,
@@ -44,6 +38,28 @@ class App extends Component {
     };
   }
 
+  newFoods = () => {
+    const newFirstFood = Foods[Math.floor(Math.random() * Foods.length)];
+
+    const filteredList = Foods.filter(
+      foodItem =>
+        foodItem.attributes.calories !== newFirstFood.attributes.calories
+    );
+
+    const newSecondFood =
+      filteredList[Math.floor(Math.random() * filteredList.length)];
+
+    const newMostCalories =
+      newFirstFood.attributes.calories > newSecondFood.attributes.calories
+        ? newFirstFood
+        : newSecondFood;
+
+    this.setState({
+      firstFood: newFirstFood,
+      secondFood: newSecondFood,
+      mostCalories: newMostCalories
+    });
+  };
   newGame = e => {
     e.preventDefault();
 
@@ -77,6 +93,7 @@ class App extends Component {
             this.state.mostCalories.attributes.calories
         }
       });
+      this.newFoods();
       console.log("correct!");
     } else {
       console.log("GAME OVER");
@@ -89,19 +106,15 @@ class App extends Component {
       <div>
         <Navbar />
         <img src={logo} alt="GitHub logo" id="github-logo" />
-
         {this.state.display === "instructions" ? (
           <Instructions clickHandler={this.newGame} />
         ) : null}
-
         {this.state.display === "game on" ? (
           <Game state={this.state} clickHandler={this.clickHandler} />
         ) : null}
-
         <Footer />
       </div>
     );
   }
 }
-
 export default App;

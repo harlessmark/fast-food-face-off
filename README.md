@@ -14,6 +14,13 @@ Run Bundler
 bundle install
 ```
 
+Initialize database
+
+```
+rails db:create
+rails db:migrate
+```
+
 Start the backend server
 
 ```
