@@ -39,7 +39,7 @@ Start the frontend server
 npm start
 ```
 
-[optional] Run the web scraper from the root folder. This will take several minutes to complete.
+[optional] Run the web scraper from the root folder. This will take several minutes to complete and will not affect the game.
 
 ```
 rails db:migrate

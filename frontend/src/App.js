@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import logo from "./logo.svg";
 import Instructions from "./components/Instructions";
 import Game from "./components/Game";
+import GameOver from "./components/GameOver";
 import Footer from "./components/Footer";
 
 class App extends Component {
@@ -60,6 +61,7 @@ class App extends Component {
       mostCalories: newMostCalories
     });
   };
+
   newGame = e => {
     e.preventDefault();
 
@@ -82,6 +84,19 @@ class App extends Component {
     });
   };
 
+  gameOver = () => {
+    fetch("http://localhost:3000/games")
+      .then(res => res.json())
+      .then(({ data }) =>
+        this.setState({
+          games: data
+        })
+      );
+    this.setState({
+      display: "game over"
+    });
+  };
+
   clickHandler = e => {
     if (e.target.src === this.state.mostCalories.attributes.image) {
       this.setState({
@@ -94,10 +109,8 @@ class App extends Component {
         }
       });
       this.newFoods();
-      console.log("correct!");
     } else {
-      console.log("GAME OVER");
-      // change this.state.display to "game over"
+      this.gameOver();
     }
   };
 
@@ -109,8 +122,13 @@ class App extends Component {
         {this.state.display === "instructions" ? (
           <Instructions clickHandler={this.newGame} />
         ) : null}
+
         {this.state.display === "game on" ? (
           <Game state={this.state} clickHandler={this.clickHandler} />
+        ) : null}
+
+        {this.state.display === "game over" ? (
+          <GameOver state={this.state} />
         ) : null}
         <Footer />
       </div>
