@@ -3,30 +3,32 @@ import Winner from "./Winner";
 import Loser from "./Loser";
 
 class GameOver extends Component {
-  topTen = Array.from(this.props.state.games)
-    .sort((a, b) => {
-      return b.attributes.score - a.attributes.score;
-    })
-    .slice(0, 10);
+  constructor(props) {
+    super(props);
+
+    const leaderboard = Array.from(this.props.state.games)
+      .sort((a, b) => {
+        return b.attributes.score - a.attributes.score;
+      })
+      .slice(0, 10);
+
+    this.state = {
+      leaderboard
+    };
+  }
 
   render() {
-    debugger;
     return (
       <>
-        <h1>GAME OVER</h1>
-        <p>You got {this.props.state.currentGame.score} correct!</p>
+        {this.props.state.currentGame.score >
+        this.state.leaderboard[9].attributes.score ? (
+          <Winner leaderboard={this.state.leaderboard} />
+        ) : (
+          <Loser leaderboard={this.state.leaderboard} />
+        )}
       </>
     );
   }
 }
 
 export default GameOver;
-
-// where to declare topTen variable?
-// TODO: Add initials
-
-// {this.props.state.currentGame.score > topTen.score ? (
-//   <Winner />
-// ) : (
-//   <Loser />
-// )}

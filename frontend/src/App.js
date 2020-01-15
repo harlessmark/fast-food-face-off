@@ -29,7 +29,7 @@ class App extends Component {
       firstFood,
       secondFood,
       mostCalories,
-      games: [],
+      games: null,
       currentGame: {
         score: 0,
         initials: "",
@@ -116,9 +116,8 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <>
         <Navbar />
-        <img src={logo} alt="GitHub logo" id="github-logo" />
         {this.state.display === "instructions" ? (
           <Instructions clickHandler={this.newGame} />
         ) : null}
@@ -127,12 +126,14 @@ class App extends Component {
           <Game state={this.state} clickHandler={this.clickHandler} />
         ) : null}
 
-        {this.state.display === "game over" ? (
+        {this.state.display === "game over" && this.state.games ? (
           <GameOver state={this.state} />
         ) : null}
         <Footer />
-      </div>
+      </>
     );
   }
 }
 export default App;
+
+// <img src={logo} alt="GitHub logo" id="github-logo" />
