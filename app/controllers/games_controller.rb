@@ -12,10 +12,11 @@ class GamesController < ApplicationController
     game = Game.find_by(id: params[:id])
 
     if game.update(game_params)
-      render json: { message: "Accepted initials." }
+      render json: { message: "Accepted initials." },
+      status: 202
     else
       render json: { message: "Didn't accept initials" },
-      status: :not_acceptable
+      status: 406
     end
   end
 
@@ -23,10 +24,8 @@ class GamesController < ApplicationController
 
   def game_params
     params.require(:game).permit(
-      :id,
       :score,
-      :initials,
-      :total_calories
+      :initials
     )
   end
 end

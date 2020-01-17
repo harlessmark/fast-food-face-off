@@ -26,6 +26,7 @@ class App extends Component {
         : secondFood;
 
     this.state = {
+      api: "http://localhost:3000/games",
       firstFood,
       secondFood,
       mostCalories,
@@ -33,11 +34,15 @@ class App extends Component {
       currentGame: {
         id: null,
         score: null,
-        initials: null,
-        total_calories: null
+        initials: null
       },
       display: "instructions"
     };
+  }
+
+  componentDidMount() {
+    // listens for left or right arrow press
+    document.addEventListener("keydown", this.logKey);
   }
 
   newFoods = () => {
@@ -66,7 +71,7 @@ class App extends Component {
   newGame = e => {
     e.preventDefault();
 
-    fetch("http://localhost:3000/games", {
+    fetch(this.state.api, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -75,13 +80,12 @@ class App extends Component {
       body: JSON.stringify({
         game: {
           score: 0,
-          initials: "",
-          total_calories: 0
+          initials: "blu"
         }
       })
     });
 
-    fetch("http://localhost:3000/games")
+    fetch(this.state.api)
       // sets id in State
       .then(res => res.json())
       .then(
@@ -90,8 +94,7 @@ class App extends Component {
             currentGame: {
               id: data.length,
               score: 0,
-              initials: "",
-              total_calories: 0
+              initials: ""
             }
           }),
         this.setState({
@@ -101,7 +104,7 @@ class App extends Component {
   };
 
   gameOver = () => {
-    fetch("http://localhost:3000/games")
+    fetch(this.state.api)
       .then(res => res.json())
       .then(({ data }) =>
         this.setState({
@@ -114,15 +117,13 @@ class App extends Component {
   };
 
   clickHandler = e => {
+    // right / wrong game logic
     if (e.target.src === this.state.mostCalories.attributes.image) {
       this.setState({
         currentGame: {
           id: this.state.currentGame.id,
           score: this.state.currentGame.score + 1,
-          initials: "",
-          total_calories:
-            this.state.currentGame.total_calories +
-            this.state.mostCalories.attributes.calories
+          initials: ""
         }
       });
       this.newFoods();
@@ -131,14 +132,45 @@ class App extends Component {
     }
   };
 
+  logKey = e => {
+    // TODO: REFACTOR?
+    if (e.key === "ArrowLeft") {
+      if (this.state.firstFood === this.state.mostCalories) {
+        this.setState({
+          currentGame: {
+            id: this.state.currentGame.id,
+            score: this.state.currentGame.score + 1,
+            initials: ""
+          }
+        });
+        this.newFoods();
+      } else {
+        this.gameOver();
+      }
+    }
+
+    if (e.key === "ArrowRight") {
+      if (this.state.secondFood === this.state.mostCalories) {
+        this.setState({
+          currentGame: {
+            id: this.state.currentGame.id,
+            score: this.state.currentGame.score + 1,
+            initials: ""
+          }
+        });
+        this.newFoods();
+      } else {
+        this.gameOver();
+      }
+    }
+  };
+
   changeHandler = e => {
-    console.log("FIRED");
     this.setState({
       currentGame: {
         id: this.state.currentGame.id,
         score: this.state.currentGame.score,
-        initials: e.target.value,
-        total_calories: this.state.currentGame.total_calories
+        initials: e.target.value
       }
     });
   };
@@ -146,7 +178,7 @@ class App extends Component {
   updateInitials = e => {
     e.preventDefault();
 
-    fetch(`http://localhost:3000/games/${this.state.currentGame.id}`, {
+    fetch(`${this.state.api}/${this.state.currentGame.id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -156,11 +188,31 @@ class App extends Component {
         game: {
           id: this.state.currentGame.id,
           score: this.state.currentGame.score,
-          initials: this.state.currentGame.initials,
-          total_calories: this.state.currentGame.total_calories
+          initials: this.state.currentGame.initials
         }
       })
     });
+
+    this.setState({
+      // clears input field
+      currentGame: {
+        id: this.state.currentGame.id,
+        score: this.state.currentGame.score,
+        initials: ""
+      }
+    });
+
+    // TODO: remove this fetch and
+    // replace with spread operator that works
+    // maybe Leaderboard is not connected?
+
+    fetch(this.state.api)
+      .then(res => res.json())
+      .then(games =>
+        this.setState({
+          games
+        })
+      );
   };
 
   render() {

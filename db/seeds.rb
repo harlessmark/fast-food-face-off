@@ -137,7 +137,7 @@ def food_image_scraper
     unparsed = HTTParty.get(search_url)
     parsed = Nokogiri::HTML(unparsed)
 
-    sleep 1
+    sleep 3
     # allows time for the page to fully load
 
     food[:image] << parsed.css("img").first.values.first.split("&")[0]
