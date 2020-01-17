@@ -7,17 +7,21 @@ class Winner extends Component {
       <>
         <p>
           You placed in the top 10! Enter your initials to be immortalized
-          forever (or whenever you get bumped off the leaderboard).
+          forever (or up until you get bumped off the leaderboard).
         </p>
 
-        <form onSubmit={this.submitHandler}>
+        <form onSubmit={this.props.submitHandler}>
           <input
             type="text"
-            name="initials"
+            value={this.props.initials}
+            placeholder="Your Initials"
             maxLength="3"
-            onChange={this.changeHandler}
+            onChange={this.props.changeHandler}
           />
-          <button type="submit"> Enter </button>
+          <button type="submit" onClick={this.props.updateInitials}>
+            {" "}
+            Enter{" "}
+          </button>
         </form>
 
         <Leaderboard leaderboard={this.props.leaderboard} />
@@ -27,5 +31,3 @@ class Winner extends Component {
 }
 
 export default Winner;
-
-// TODO: Add initials

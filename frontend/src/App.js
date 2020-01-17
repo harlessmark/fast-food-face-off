@@ -31,9 +31,10 @@ class App extends Component {
       mostCalories,
       games: null,
       currentGame: {
-        score: 0,
-        initials: "",
-        total_calories: 0
+        id: null,
+        score: null,
+        initials: null,
+        total_calories: null
       },
       display: "instructions"
     };
@@ -79,9 +80,24 @@ class App extends Component {
         }
       })
     });
-    this.setState({
-      display: "game on"
-    });
+
+    fetch("http://localhost:3000/games")
+      // sets id in State
+      .then(res => res.json())
+      .then(
+        ({ data }) =>
+          this.setState({
+            currentGame: {
+              id: data.length,
+              score: 0,
+              initials: "",
+              total_calories: 0
+            }
+          }),
+        this.setState({
+          display: "game on"
+        })
+      );
   };
 
   gameOver = () => {
@@ -101,6 +117,7 @@ class App extends Component {
     if (e.target.src === this.state.mostCalories.attributes.image) {
       this.setState({
         currentGame: {
+          id: this.state.currentGame.id,
           score: this.state.currentGame.score + 1,
           initials: "",
           total_calories:
@@ -112,6 +129,38 @@ class App extends Component {
     } else {
       this.gameOver();
     }
+  };
+
+  changeHandler = e => {
+    console.log("FIRED");
+    this.setState({
+      currentGame: {
+        id: this.state.currentGame.id,
+        score: this.state.currentGame.score,
+        initials: e.target.value,
+        total_calories: this.state.currentGame.total_calories
+      }
+    });
+  };
+
+  updateInitials = e => {
+    e.preventDefault();
+
+    fetch(`http://localhost:3000/games/${this.state.currentGame.id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json"
+      },
+      body: JSON.stringify({
+        game: {
+          id: this.state.currentGame.id,
+          score: this.state.currentGame.score,
+          initials: this.state.currentGame.initials,
+          total_calories: this.state.currentGame.total_calories
+        }
+      })
+    });
   };
 
   render() {
@@ -127,7 +176,11 @@ class App extends Component {
         ) : null}
 
         {this.state.display === "game over" && this.state.games ? (
-          <GameOver state={this.state} />
+          <GameOver
+            state={this.state}
+            updateInitials={this.updateInitials}
+            changeHandler={this.changeHandler}
+          />
         ) : null}
         <Footer />
       </>

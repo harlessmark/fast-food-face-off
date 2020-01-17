@@ -34,7 +34,7 @@ cd frontend
 npm start
 ```
 
-[optional] Run the web scraper from the root folder. This will take several minutes to complete and will not affect the game.
+[optional] Run the web scrapers from the root folder. This will take several minutes to complete and will not affect the game.
 
 ```
 rails db:migrate
@@ -57,5 +57,5 @@ This project is licensed under the [MIT License](LICENSE).
 ## Acknowledgments
 
 - Thank you [Alex Pugia](https://github.com/jasminnancy) for originally writing the frontend in plain Javascript.
-- Thanks to [Brady Pascoe](https://github.com/bpas247) and [Ross Wakefield](https://github.com/Ross1309) for helping me out with React.
+- Thanks to [Brady Pascoe](https://github.com/bpas247), [Ross Wakefield](https://github.com/Ross1309) and [Terry Sahaidak](https://github.com/terrysahaidak) for helping me out with React.
 - The food data was scraped from [Fast Food Nutrition](https://fastfoodnutrition.org).

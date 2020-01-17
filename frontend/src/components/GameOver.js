@@ -22,9 +22,17 @@ class GameOver extends Component {
       <>
         {this.props.state.currentGame.score >
         this.state.leaderboard[9].attributes.score ? (
-          <Winner leaderboard={this.state.leaderboard} />
+          <Winner
+            state={this.props.state}
+            leaderboard={this.state.leaderboard}
+            updateInitials={this.props.updateInitials}
+            changeHandler={this.props.changeHandler}
+          />
         ) : (
-          <Loser leaderboard={this.state.leaderboard} />
+          <Loser
+            state={this.props.state}
+            leaderboard={this.state.leaderboard}
+          />
         )}
       </>
     );
