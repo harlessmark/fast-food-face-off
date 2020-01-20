@@ -13,7 +13,7 @@ class Winner extends Component {
         <form onSubmit={this.props.submitHandler}>
           <input
             type="text"
-            value={this.props.state.currentGame.initials}
+            value={this.props.currentGame.initials}
             placeholder="Your Initials"
             maxLength="3"
             onChange={this.props.changeHandler}

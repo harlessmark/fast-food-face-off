@@ -27,6 +27,7 @@ class App extends Component {
 
     this.state = {
       api: "http://localhost:3000/games",
+      leaderboard: null,
       firstFood,
       secondFood,
       mostCalories,
@@ -43,6 +44,15 @@ class App extends Component {
   componentDidMount() {
     // listens for left or right arrow press
     document.addEventListener("keydown", this.logKey);
+
+    fetch(this.state.api)
+      // retreives all Games played
+      .then(res => res.json())
+      .then(({ data }) =>
+        this.setState({
+          games: data
+        })
+      );
   }
 
   newFoods = () => {
@@ -72,6 +82,7 @@ class App extends Component {
     e.preventDefault();
 
     fetch(this.state.api, {
+      // creates new Game instance
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -80,7 +91,7 @@ class App extends Component {
       body: JSON.stringify({
         game: {
           score: 0,
-          initials: "blu"
+          initials: "aaa"
         }
       })
     });
@@ -101,16 +112,20 @@ class App extends Component {
           display: "game on"
         })
       );
+
+    let leaderboard = Array.from(this.state.games)
+      // gets current top 10 scores
+      .sort((a, b) => {
+        return b.attributes.score - a.attributes.score;
+      })
+      .slice(0, 10);
+
+    this.setState({
+      leaderboard
+    });
   };
 
   gameOver = () => {
-    fetch(this.state.api)
-      .then(res => res.json())
-      .then(({ data }) =>
-        this.setState({
-          games: data
-        })
-      );
     this.setState({
       display: "game over"
     });
@@ -193,6 +208,27 @@ class App extends Component {
       })
     });
 
+    const newCurrentGame = {
+      id: this.state.currentGame.id,
+      attributes: {
+        score: this.state.currentGame.score,
+        initials: this.state.currentGame.initials
+      }
+    };
+
+    const newGamesArray = [...this.state.games, newCurrentGame];
+
+    let leaderboard = Array.from(newGamesArray)
+      // updates new leaderboard
+      .sort((a, b) => {
+        return b.attributes.score - a.attributes.score;
+      })
+      .slice(0, 10);
+
+    this.setState({
+      leaderboard
+    });
+
     this.setState({
       // clears input field
       currentGame: {
@@ -201,18 +237,6 @@ class App extends Component {
         initials: ""
       }
     });
-
-    // TODO: remove this fetch and
-    // replace with spread operator that works
-    // maybe Leaderboard is not connected?
-
-    fetch(this.state.api)
-      .then(res => res.json())
-      .then(games =>
-        this.setState({
-          games
-        })
-      );
   };
 
   render() {
