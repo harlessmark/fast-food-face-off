@@ -28,6 +28,7 @@ class App extends Component {
     this.state = {
       api: "http://localhost:3000/games",
       leaderboard: null,
+      timer: 6,
       firstFood,
       secondFood,
       mostCalories,
@@ -56,6 +57,22 @@ class App extends Component {
   }
 
   newFoods = () => {
+    const sleep = milliseconds => {
+      // pauses before new food renders to show calories of both foods
+      return new Promise(resolve => setTimeout(resolve, milliseconds));
+    };
+
+    sleep(2000).then(() => {
+      console.log("pooooo");
+    });
+
+    // TODO: pause timer to display calories of both foods
+
+    this.setState({
+      // resets timer on correct guess
+      timer: 6
+    });
+
     const newFirstFood = Foods[Math.floor(Math.random() * Foods.length)];
 
     const filteredList = Foods.filter(
@@ -239,6 +256,21 @@ class App extends Component {
     });
   };
 
+  countdown = () => {
+    setInterval(() => {
+      if (this.state.timer > 0)
+        this.setState({
+          timer: this.state.timer - 1
+        });
+
+      if (this.state.timer === 0) {
+        this.setState({
+          display: "game over"
+        });
+      }
+    }, 1000);
+  };
+
   render() {
     return (
       <>
@@ -248,7 +280,11 @@ class App extends Component {
         ) : null}
 
         {this.state.display === "game on" ? (
-          <Game state={this.state} clickHandler={this.clickHandler} />
+          <Game
+            state={this.state}
+            clickHandler={this.clickHandler}
+            countdown={this.countdown}
+          />
         ) : null}
 
         {this.state.display === "game over" && this.state.games ? (

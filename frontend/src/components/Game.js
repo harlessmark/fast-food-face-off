@@ -1,6 +1,11 @@
 import React, { Component } from "react";
 
 class Game extends Component {
+  componentDidMount() {
+    // begins countdown
+    this.props.countdown();
+  }
+
   render() {
     return (
       <>
@@ -31,6 +36,7 @@ class Game extends Component {
             alt="fast food"
           />
         </div>
+        <h1>{this.props.state.timer}</h1>
       </>
     );
   }
