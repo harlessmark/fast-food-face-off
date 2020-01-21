@@ -27,7 +27,7 @@ class Game extends Component {
         <div>
           <h1>
             {this.props.state.showCalories
-              ? this.props.state.firstFood.attributes.calories
+              ? this.props.state.secondFood.attributes.calories
               : null}
           </h1>
           <h3>{this.props.state.secondFood.attributes.name}</h3>

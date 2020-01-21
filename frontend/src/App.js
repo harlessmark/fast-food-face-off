@@ -29,7 +29,6 @@ class App extends Component {
       api: "http://localhost:3000/games",
       leaderboard: null,
       gameTimer: 5,
-      calorieTimer: 3,
       firstFood,
       secondFood,
       mostCalories,
@@ -324,12 +323,3 @@ export default App;
 
 // TODO: pause timer to display calories of both foods
 // be sure user can't spam click to get more points
-
-// const sleep = milliseconds => {
-//   // pauses before new food renders to show calories of both foods
-//   return new Promise(resolve => setTimeout(resolve, milliseconds));
-// };
-//
-// sleep(this.state.calorieTimer * 1000).then(() => {
-//   console.log("OOOOOOOOO");
-// });
