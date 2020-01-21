@@ -3,13 +3,14 @@ import React, { Component } from "react";
 class Game extends Component {
   componentDidMount() {
     // begins countdown
-    this.props.countdown();
+    this.props.gameCountdown();
   }
 
   render() {
     return (
       <>
         <div>
+          <h1>{this.props.state.gameTimer}</h1>
           <h3>{this.props.state.firstFood.attributes.name}</h3>
           <img
             className="food-logo"
@@ -24,6 +25,11 @@ class Game extends Component {
         </div>
 
         <div>
+          <h1>
+            {this.props.state.showCalories
+              ? this.props.state.firstFood.attributes.calories
+              : null}
+          </h1>
           <h3>{this.props.state.secondFood.attributes.name}</h3>
           <img
             className="food-logo"
@@ -36,7 +42,6 @@ class Game extends Component {
             alt="fast food"
           />
         </div>
-        <h1>{this.props.state.timer}</h1>
       </>
     );
   }

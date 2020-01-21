@@ -28,10 +28,12 @@ class App extends Component {
     this.state = {
       api: "http://localhost:3000/games",
       leaderboard: null,
-      timer: 6,
+      gameTimer: 5,
+      calorieTimer: 3,
       firstFood,
       secondFood,
       mostCalories,
+      showCalories: false,
       games: null,
       currentGame: {
         id: null,
@@ -57,32 +59,18 @@ class App extends Component {
   }
 
   newFoods = () => {
-    const sleep = milliseconds => {
-      // pauses before new food renders to show calories of both foods
-      return new Promise(resolve => setTimeout(resolve, milliseconds));
-    };
-
-    sleep(2000).then(() => {
-      console.log("pooooo");
-    });
-
-    // TODO: pause timer to display calories of both foods
-
     this.setState({
-      // resets timer on correct guess
-      timer: 6
+      gameTimer: 5,
+      showCalories: false
     });
 
     const newFirstFood = Foods[Math.floor(Math.random() * Foods.length)];
-
     const filteredList = Foods.filter(
       foodItem =>
         foodItem.attributes.calories !== newFirstFood.attributes.calories
     );
-
     const newSecondFood =
       filteredList[Math.floor(Math.random() * filteredList.length)];
-
     const newMostCalories =
       newFirstFood.attributes.calories > newSecondFood.attributes.calories
         ? newFirstFood
@@ -150,6 +138,10 @@ class App extends Component {
 
   clickHandler = e => {
     // right / wrong game logic
+    this.setState({
+      showCalories: true
+    });
+
     if (e.target.src === this.state.mostCalories.attributes.image) {
       this.setState({
         currentGame: {
@@ -162,6 +154,47 @@ class App extends Component {
     } else {
       this.gameOver();
     }
+  };
+
+  gameCountdown = () => {
+    const interval = setInterval(() => {
+      if (this.state.gameTimer > 0)
+        this.setState({
+          gameTimer: this.state.gameTimer - 1
+        });
+
+      if (this.state.gameTimer === 5 || this.state.currentGame.score !== 0) {
+        // stops countdown if user made a correct guess
+        clearInterval(interval);
+      }
+
+      if (this.state.gameTimer === 0) {
+        this.setState({
+          display: "game over"
+        });
+        clearInterval(interval);
+      }
+    }, 1000);
+  };
+
+  playAgain = () => {
+    this.setState({
+      display: "game on",
+      gameTimer: 5
+    });
+
+    this.newFoods();
+    this.setState({
+      currentGame: {
+        id: this.state.currentGame.id,
+        score: 0,
+        initials: this.state.currentGame.initials
+      }
+    });
+  };
+
+  ShowCalories = () => {
+    console.log("showing calories");
   };
 
   logKey = e => {
@@ -256,21 +289,6 @@ class App extends Component {
     });
   };
 
-  countdown = () => {
-    setInterval(() => {
-      if (this.state.timer > 0)
-        this.setState({
-          timer: this.state.timer - 1
-        });
-
-      if (this.state.timer === 0) {
-        this.setState({
-          display: "game over"
-        });
-      }
-    }, 1000);
-  };
-
   render() {
     return (
       <>
@@ -283,7 +301,7 @@ class App extends Component {
           <Game
             state={this.state}
             clickHandler={this.clickHandler}
-            countdown={this.countdown}
+            gameCountdown={this.gameCountdown}
           />
         ) : null}
 
@@ -292,6 +310,7 @@ class App extends Component {
             state={this.state}
             updateInitials={this.updateInitials}
             changeHandler={this.changeHandler}
+            playAgain={this.playAgain}
           />
         ) : null}
         <Footer />
@@ -302,3 +321,15 @@ class App extends Component {
 export default App;
 
 // <img src={logo} alt="GitHub logo" id="github-logo" />
+
+// TODO: pause timer to display calories of both foods
+// be sure user can't spam click to get more points
+
+// const sleep = milliseconds => {
+//   // pauses before new food renders to show calories of both foods
+//   return new Promise(resolve => setTimeout(resolve, milliseconds));
+// };
+//
+// sleep(this.state.calorieTimer * 1000).then(() => {
+//   console.log("OOOOOOOOO");
+// });

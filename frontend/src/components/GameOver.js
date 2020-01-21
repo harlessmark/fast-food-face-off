@@ -6,6 +6,7 @@ class GameOver extends Component {
   render() {
     return (
       <>
+        <button onClick={this.props.playAgain}>Play Again?</button>
         {this.props.state.currentGame.score >
         this.props.state.leaderboard[9].attributes.score ? (
           <Winner
