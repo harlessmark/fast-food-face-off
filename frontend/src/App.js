@@ -28,7 +28,7 @@ class App extends Component {
     this.state = {
       api: "http://localhost:3000/games",
       leaderboard: null,
-      gameTimer: 5,
+      timer: 5,
       firstFood,
       secondFood,
       mostCalories,
@@ -59,7 +59,7 @@ class App extends Component {
 
   newFoods = () => {
     this.setState({
-      gameTimer: 5,
+      timer: 5,
       showCalories: false
     });
 
@@ -157,17 +157,13 @@ class App extends Component {
 
   gameCountdown = () => {
     const interval = setInterval(() => {
-      if (this.state.gameTimer > 0)
+      if (this.state.timer > 0) {
         this.setState({
-          gameTimer: this.state.gameTimer - 1
+          timer: this.state.timer - 1
         });
-
-      if (this.state.gameTimer === 5 || this.state.currentGame.score !== 0) {
-        // stops countdown if user made a correct guess
-        clearInterval(interval);
       }
 
-      if (this.state.gameTimer === 0) {
+      if (this.state.timer === 0) {
         this.setState({
           display: "game over"
         });
@@ -179,7 +175,7 @@ class App extends Component {
   playAgain = () => {
     this.setState({
       display: "game on",
-      gameTimer: 5
+      timer: 5
     });
 
     this.newFoods();
@@ -190,10 +186,6 @@ class App extends Component {
         initials: this.state.currentGame.initials
       }
     });
-  };
-
-  ShowCalories = () => {
-    console.log("showing calories");
   };
 
   logKey = e => {
@@ -323,3 +315,32 @@ export default App;
 
 // TODO: pause timer to display calories of both foods
 // be sure user can't spam click to get more points
+
+// const sleep = milliseconds => {
+//   // pauses before new food renders to show calories of both foods
+//   return new Promise(resolve => setTimeout(resolve, milliseconds));
+// };
+//
+// sleep(5000).then(() => {
+//   // logic
+// });
+//
+// const interval = setInterval(() => {
+//   if (this.state.timer > 0)
+//     this.setState({
+//       timer: this.state.timer - 1
+//     });
+//
+//   if (this.state.timer === 5) {
+//     // stops countdown if user made a correct guess
+//     clearInterval(interval);
+//   }
+//
+//   if (this.state.timer === 0) {
+//     console.log(this.state.timer);
+//     this.setState({
+//       display: "game over"
+//     });
+//     clearInterval(interval);
+//   }
+// }, 1000);

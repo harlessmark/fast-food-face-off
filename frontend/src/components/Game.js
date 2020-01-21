@@ -10,7 +10,7 @@ class Game extends Component {
     return (
       <>
         <div>
-          <h1>{this.props.state.gameTimer}</h1>
+          <h1>{this.props.state.timer}</h1>
           <h3>{this.props.state.firstFood.attributes.name}</h3>
           <img
             className="food-logo"
