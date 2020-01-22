@@ -29,6 +29,7 @@ class App extends Component {
       api: "http://localhost:3000/games",
       leaderboard: null,
       timer: 5,
+      isCorrect: null,
       firstFood,
       secondFood,
       mostCalories,
@@ -43,9 +44,11 @@ class App extends Component {
     };
   }
 
+  // TODO: declare const api somewhere else besides state?
+
   componentDidMount() {
-    // listens for left or right arrow press
     document.addEventListener("keydown", this.logKey);
+    // listens for left or right arrow press
 
     fetch(this.state.api)
       // retreives all Games played
@@ -57,36 +60,11 @@ class App extends Component {
       );
   }
 
-  newFoods = () => {
-    this.setState({
-      timer: 5,
-      showCalories: false
-    });
-
-    const newFirstFood = Foods[Math.floor(Math.random() * Foods.length)];
-    const filteredList = Foods.filter(
-      foodItem =>
-        foodItem.attributes.calories !== newFirstFood.attributes.calories
-    );
-    const newSecondFood =
-      filteredList[Math.floor(Math.random() * filteredList.length)];
-    const newMostCalories =
-      newFirstFood.attributes.calories > newSecondFood.attributes.calories
-        ? newFirstFood
-        : newSecondFood;
-
-    this.setState({
-      firstFood: newFirstFood,
-      secondFood: newSecondFood,
-      mostCalories: newMostCalories
-    });
-  };
-
   newGame = e => {
+    // starts new game
     e.preventDefault();
 
     fetch(this.state.api, {
-      // creates new Game instance
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -129,34 +107,12 @@ class App extends Component {
     });
   };
 
-  gameOver = () => {
-    this.setState({
-      display: "game over"
-    });
-  };
-
-  clickHandler = e => {
-    // right / wrong game logic
-    this.setState({
-      showCalories: true
-    });
-
-    if (e.target.src === this.state.mostCalories.attributes.image) {
-      this.setState({
-        currentGame: {
-          id: this.state.currentGame.id,
-          score: this.state.currentGame.score + 1,
-          initials: ""
-        }
-      });
-      this.newFoods();
-    } else {
-      this.gameOver();
-    }
-  };
-
   gameCountdown = () => {
     const interval = setInterval(() => {
+      if (this.state.isCorrect !== null) {
+        clearInterval(interval);
+      }
+
       if (this.state.timer > 0) {
         this.setState({
           timer: this.state.timer - 1
@@ -172,24 +128,76 @@ class App extends Component {
     }, 1000);
   };
 
-  playAgain = () => {
+  newFoods = () => {
+    // randomizes new foods
     this.setState({
-      display: "game on",
-      timer: 5
+      timer: 5,
+      showCalories: false
     });
 
-    this.newFoods();
+    const newFirstFood = Foods[Math.floor(Math.random() * Foods.length)];
+    const filteredList = Foods.filter(
+      foodItem =>
+        foodItem.attributes.calories !== newFirstFood.attributes.calories
+    );
+    const newSecondFood =
+      filteredList[Math.floor(Math.random() * filteredList.length)];
+    const newMostCalories =
+      newFirstFood.attributes.calories > newSecondFood.attributes.calories
+        ? newFirstFood
+        : newSecondFood;
+
     this.setState({
-      currentGame: {
-        id: this.state.currentGame.id,
-        score: 0,
-        initials: this.state.currentGame.initials
-      }
+      firstFood: newFirstFood,
+      secondFood: newSecondFood,
+      mostCalories: newMostCalories
     });
   };
 
+  clickHandler = e => {
+    // game logic
+    const event = e.target.src;
+    this.setState({ showCalories: true });
+
+    if (event === this.state.mostCalories.attributes.image) {
+      this.setState({
+        isCorrect: true
+      });
+    } else {
+      this.setState({
+        isCorrect: false
+      });
+    }
+
+    this.setState({
+      timer: 5
+    });
+
+    setTimeout(() => {
+      if (event === this.state.mostCalories.attributes.image) {
+        this.setState({
+          currentGame: {
+            id: this.state.currentGame.id,
+            score: this.state.currentGame.score + 1,
+            initials: ""
+          }
+        });
+        this.setState({
+          isCorrect: null
+        });
+        this.newFoods();
+      } else {
+        this.setState({
+          isCorrect: null
+        });
+
+        this.gameOver();
+      }
+    }, 2000);
+  };
+
   logKey = e => {
-    // TODO: REFACTOR?
+    // captures left and right arrow key presses
     if (e.key === "ArrowLeft") {
       if (this.state.firstFood === this.state.mostCalories) {
         this.setState({
@@ -221,6 +229,12 @@ class App extends Component {
     }
   };
 
+  gameOver = () => {
+    this.setState({
+      display: "game over"
+    });
+  };
+
   changeHandler = e => {
     this.setState({
       currentGame: {
@@ -250,6 +264,7 @@ class App extends Component {
     });
 
     const newCurrentGame = {
+      // makes currentGame same format as the rest of the games
       id: this.state.currentGame.id,
       attributes: {
         score: this.state.currentGame.score,
@@ -276,6 +291,22 @@ class App extends Component {
         id: this.state.currentGame.id,
         score: this.state.currentGame.score,
         initials: ""
+      }
+    });
+  };
+
+  playAgain = () => {
+    this.setState({
+      display: "game on",
+      timer: 5
+    });
+
+    this.newFoods();
+    this.setState({
+      currentGame: {
+        id: this.state.currentGame.id,
+        score: 0,
+        initials: this.state.currentGame.initials
       }
     });
   };
@@ -312,35 +343,3 @@ class App extends Component {
 export default App;
 
 // <img src={logo} alt="GitHub logo" id="github-logo" />
-
-// TODO: pause timer to display calories of both foods
-// be sure user can't spam click to get more points
-
-// const sleep = milliseconds => {
-//   // pauses before new food renders to show calories of both foods
-//   return new Promise(resolve => setTimeout(resolve, milliseconds));
-// };
-//
-// sleep(5000).then(() => {
-//   // logic
-// });
-//
-// const interval = setInterval(() => {
-//   if (this.state.timer > 0)
-//     this.setState({
-//       timer: this.state.timer - 1
-//     });
-//
-//   if (this.state.timer === 5) {
-//     // stops countdown if user made a correct guess
-//     clearInterval(interval);
-//   }
-//
-//   if (this.state.timer === 0) {
-//     console.log(this.state.timer);
-//     this.setState({
-//       display: "game over"
-//     });
-//     clearInterval(interval);
-//   }
-// }, 1000);

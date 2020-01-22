@@ -58,4 +58,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 - Thank you [Alex Pugia](https://github.com/jasminnancy) for originally writing the frontend in plain Javascript.
 - Thanks to [Brady Pascoe](https://github.com/bpas247), [Ross Wakefield](https://github.com/Ross1309) and [Terry Sahaidak](https://github.com/terrysahaidak) for helping me out with my code.
-- The food data was scraped from [Fast Food Nutrition](https://fastfoodnutrition.org).
+- Food data was scraped from [Fast Food Nutrition](https://fastfoodnutrition.org).
