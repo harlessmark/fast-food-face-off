@@ -109,7 +109,7 @@ class App extends Component {
 
   gameCountdown = () => {
     const interval = setInterval(() => {
-      if (this.state.isCorrect !== null) {
+      if (this.state.isCorrect === false) {
         clearInterval(interval);
       }
 

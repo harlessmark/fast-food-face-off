@@ -2,7 +2,6 @@ import React, { Component } from "react";
 
 class Game extends Component {
   componentDidMount() {
-    debugger;
     // begins countdown
     this.props.gameCountdown();
   }
@@ -19,6 +18,11 @@ class Game extends Component {
             ) : (
               this.props.state.timer
             )}
+          </h1>
+          <h1>
+            {this.props.state.showCalories
+              ? this.props.state.firstFood.attributes.calories
+              : null}
           </h1>
           '<h3>{this.props.state.firstFood.attributes.name}</h3>
           <img
