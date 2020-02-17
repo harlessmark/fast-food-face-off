@@ -19,6 +19,7 @@ Initialize database
 ```
 rails db:create
 rails db:migrate
+rails db:seed
 ```
 
 Start the backend server
@@ -35,6 +36,9 @@ npm start
 ```
 
 [optional] Run the web scrapers from the root folder. This will take several minutes to complete and will not affect the game.
+
+1. Comment out lines 5-14.
+2. Uncomment out all lines below line 14.
 
 ```
 rails db:migrate
