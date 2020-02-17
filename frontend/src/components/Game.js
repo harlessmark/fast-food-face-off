@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Card from "react-bootstrap/Card";
 
 class Game extends Component {
   componentDidMount() {
@@ -19,42 +20,59 @@ class Game extends Component {
               this.props.state.timer
             )}
           </h1>
-          <h1>
-            {this.props.state.showCalories
-              ? this.props.state.firstFood.attributes.calories
-              : null}
-          </h1>
-          '<h3>{this.props.state.firstFood.attributes.name}</h3>
-          <img
-            className="food-logo"
-            src={this.props.state.firstFood.attributes.restaurant_logo}
-            alt="restaurant logo"
-          />
-          <img
-            onClick={this.props.clickHandler}
+        </div>
+
+        <Card
+          onClick={this.props.clickHandler}
+          style={{ width: "28rem" }}
+          id={this.props.state.firstFood.attributes.image}
+        >
+          <Card.Img
+            variant="top"
             src={this.props.state.firstFood.attributes.image}
             alt="fast food"
           />
-        </div>
+          <Card.Body>
+            <Card.Title>
+              {this.props.state.showCalories
+                ? this.props.state.firstFood.attributes.calories
+                : this.props.state.firstFood.attributes.name}{" "}
+              Calories
+            </Card.Title>
+            <Card.Text>
+              {this.props.state.firstFood.attributes.restaurant.replace(
+                "+",
+                " "
+              )}
+            </Card.Text>
+          </Card.Body>
+        </Card>
 
-        <div>
-          <h1>
-            {this.props.state.showCalories
-              ? this.props.state.secondFood.attributes.calories
-              : null}
-          </h1>
-          <h3>{this.props.state.secondFood.attributes.name}</h3>
-          <img
-            className="food-logo"
-            src={this.props.state.secondFood.attributes.restaurant_logo}
-            alt="restaurant logo"
-          />
-          <img
-            onClick={this.props.clickHandler}
+        <Card
+          onClick={this.props.clickHandler}
+          style={{ width: "28rem" }}
+          id={this.props.state.secondFood.attributes.image}
+        >
+          <Card.Img
+            variant="top"
             src={this.props.state.secondFood.attributes.image}
             alt="fast food"
           />
-        </div>
+          <Card.Body>
+            <Card.Title>
+              {this.props.state.showCalories
+                ? this.props.state.secondFood.attributes.calories
+                : this.props.state.firstFood.attributes.name}{" "}
+              Calories
+            </Card.Title>
+            <Card.Text>
+              {this.props.state.secondFood.attributes.restaurant.replace(
+                "+",
+                " "
+              )}
+            </Card.Text>
+          </Card.Body>
+        </Card>
       </>
     );
   }

@@ -50,7 +50,6 @@ rails db:seed
 - [Ruby](http://www.yahoo.com) - Backend language
 - [Ruby on Rails](https://rubyonrails.org/) - Ruby web application framework
 - [React](https://reactjs.org/) - Javascript frontend framework
-- [Tailwind CSS](https://www.tailwindcss.com) - CSS framework
 - [Nokogiri](https://github.com/sparklemotion/nokogiri) - HTML and XML parser
 - [Fast JSON API](https://github.com/Netflix/fast_jsonapi) - Ruby serializer
 

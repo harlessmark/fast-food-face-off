@@ -7,6 +7,7 @@ import Instructions from "./components/Instructions";
 import Game from "./components/Game";
 import GameOver from "./components/GameOver";
 import Footer from "./components/Footer";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 class App extends Component {
   constructor(props) {
@@ -43,8 +44,6 @@ class App extends Component {
       display: "instructions"
     };
   }
-
-  // TODO: declare const api somewhere else besides state?
 
   componentDidMount() {
     document.addEventListener("keydown", this.logKey);
@@ -156,7 +155,7 @@ class App extends Component {
 
   clickHandler = e => {
     // game logic
-    const event = e.target.src;
+    const event = e.currentTarget.id;
     this.setState({ showCalories: true });
 
     if (event === this.state.mostCalories.attributes.image) {

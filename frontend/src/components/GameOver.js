@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import Winner from "./Winner";
 import Loser from "./Loser";
+import Button from "react-bootstrap/Button";
 
 class GameOver extends Component {
   render() {
     return (
       <>
-        <button onClick={this.props.playAgain}>Play Again?</button>
+        <Button onClick={this.props.playAgain}>Play Again?</Button>
 
         {this.props.state.currentGame.score >
         this.props.state.leaderboard[9].attributes.score ? (
