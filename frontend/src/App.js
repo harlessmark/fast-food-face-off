@@ -6,7 +6,6 @@ import Instructions from "./components/Instructions";
 import Game from "./components/Game";
 import GameOver from "./components/GameOver";
 import Footer from "./components/Footer";
-import About from "./components/About";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 class App extends Component {

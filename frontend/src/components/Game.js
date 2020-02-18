@@ -14,9 +14,9 @@ class Game extends Component {
           <Col sm="auto">
             <h1 className="display-3">
               {this.props.state.isCorrect ? (
-                <h1>CORRECT</h1>
+                <h1 className="display-3">CORRECT</h1>
               ) : this.props.state.isCorrect === false ? (
-                <h1>WRONG</h1>
+                <h1 className="display-3">WRONG</h1>
               ) : (
                 this.props.state.timer
               )}
@@ -27,6 +27,7 @@ class Game extends Component {
         <Row className="justify-content-center">
           <Col md={6} lg="auto">
             <Card
+              className="mb-4"
               onClick={this.props.clickHandler}
               style={{ width: "20rem" }}
               id={this.props.state.firstFood.attributes.image}
@@ -37,7 +38,17 @@ class Game extends Component {
                 alt="fast food"
               />
               <Card.Body>
-                <Card.Title>
+                <Card.Title
+                  className={
+                    this.props.state.mostCalories === this.props.state.firstFood
+                      ? this.props.state.showCalories
+                        ? "correct"
+                        : null
+                      : this.props.state.showCalories
+                      ? "incorrect"
+                      : null
+                  }
+                >
                   {this.props.state.showCalories
                     ? this.props.state.firstFood.attributes.calories
                     : this.props.state.firstFood.attributes.name}{" "}
@@ -65,7 +76,18 @@ class Game extends Component {
                 alt="fast food"
               />
               <Card.Body>
-                <Card.Title>
+                <Card.Title
+                  className={
+                    this.props.state.mostCalories ===
+                    this.props.state.secondFood
+                      ? this.props.state.showCalories
+                        ? "correct"
+                        : null
+                      : this.props.state.showCalories
+                      ? "incorrect"
+                      : null
+                  }
+                >
                   {this.props.state.showCalories
                     ? this.props.state.secondFood.attributes.calories
                     : this.props.state.firstFood.attributes.name}{" "}
@@ -79,6 +101,29 @@ class Game extends Component {
                 </Card.Text>
               </Card.Body>
             </Card>
+          </Col>
+        </Row>
+        <Row className="justify-content-center">
+          <Col sm="auto">
+            <h3>
+              {this.props.state.currentGame.score === 1
+                ? "KILLING SPREE"
+                : null}
+              {this.props.state.currentGame.score === 2
+                ? "KILLING FRENZY"
+                : null}
+              {this.props.state.currentGame.score === 3 ? "RUNNING RIOT" : null}
+              {this.props.state.currentGame.score === 4 ? "RAMPAGE" : null}
+              {this.props.state.currentGame.score === 5 ? "UNTOUCHABLE" : null}
+              {this.props.state.currentGame.score === 6 ? "INVINCIBLE" : null}
+              {this.props.state.currentGame.score === 7
+                ? "INCONVEIVABLE"
+                : null}
+              {this.props.state.currentGame.score === 8
+                ? "UNFRIGGENBELIEVEABLE"
+                : null}
+              {this.props.state.currentGame.score === 9 ? "COMEBACK" : null}
+            </h3>
           </Col>
         </Row>
       </Container>

@@ -3,16 +3,10 @@
   color: white;
 }
 
-#github-logo {
-  position: absolute;
-  top: 0;
-  right: 0;
+.correct {
+  color: green;
 }
 
-.food-logo {
-  width: 200px;
-}
-
-.red {
+.incorrect {
   color: red;
 }

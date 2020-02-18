@@ -6,7 +6,7 @@ const Navbar = () => (
     <Row className="justify-content-sm-center">
       <Col sm="auto">
         <h5>
-          Fast Food Face-Off / Leaderboard / About /{" "}
+          Fast Food Face-Off /{" "}
           <a
             href="https://github.com/superhackerboy/fast-food-face-off"
             target="_blank"
