@@ -1,11 +1,23 @@
 import React from "react";
-
-// had to rename to 'Navbars' because React-Bootstrap reserved 'Navbar'
+import { Container, Row, Col } from "react-bootstrap";
 
 const Navbar = () => (
-  <>
-    <h5>Fast Food Face-Off</h5>
-  </>
+  <Container className="mt-5">
+    <Row className="justify-content-sm-center">
+      <Col sm="auto">
+        <h5>
+          Fast Food Face-Off / Leaderboard / About /{" "}
+          <a
+            href="https://github.com/superhackerboy/fast-food-face-off"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+        </h5>
+      </Col>
+    </Row>
+  </Container>
 );
 
 export default Navbar;

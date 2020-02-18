@@ -2,11 +2,11 @@ import React, { Component } from "react";
 import "./App.css";
 import Foods from "./foods.json";
 import Navbar from "./components/Navbar";
-import logo from "./logo.svg";
 import Instructions from "./components/Instructions";
 import Game from "./components/Game";
 import GameOver from "./components/GameOver";
 import Footer from "./components/Footer";
+import About from "./components/About";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 class App extends Component {
@@ -340,5 +340,3 @@ class App extends Component {
   }
 }
 export default App;
-
-// <img src={logo} alt="GitHub logo" id="github-logo" />
