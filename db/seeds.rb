@@ -1,6 +1,5 @@
 require 'nokogiri'
 require 'httparty'
-require 'byebug'
 
 @id = 0
 
