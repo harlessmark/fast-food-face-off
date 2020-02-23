@@ -1,4 +1,4 @@
-# Fast Food Face-Off (Work in Progress...)
+# Fast Food Face-Off
 
 You're given two random fast food menu items to choose from. Which one do you think has the most calories? Each correct answer gets you one point. Pick the wrong answer then it's GAME OVER. Try to make your way to the leaderboard!
 
@@ -47,7 +47,7 @@ rails db:seed
 
 - [Ruby](http://www.yahoo.com) - Backend language
 - [Ruby on Rails](https://rubyonrails.org/) - Ruby web application framework
-- [React](https://reactjs.org/) - Javascript frontend framework
+- [React](https://reactjs.org/) - Javascript frontend library
 - [React Bootstrap](https://react-bootstrap.github.io/) - CSS framework
 - [Nokogiri](https://github.com/sparklemotion/nokogiri) - HTML and XML parser
 - [Fast JSON API](https://github.com/Netflix/fast_jsonapi) - Ruby serializer
