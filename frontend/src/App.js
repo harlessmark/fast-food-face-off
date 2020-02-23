@@ -26,7 +26,7 @@ class App extends Component {
         : secondFood;
 
     this.state = {
-      api: "http://localhost:3000/games",
+      api: "https://fast-food-face-off.herokuapp.com/games",
       leaderboard: null,
       timer: 7,
       isCorrect: null,
