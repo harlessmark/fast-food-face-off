@@ -28,7 +28,7 @@ class App extends Component {
     this.state = {
       api: "http://localhost:3000/games",
       leaderboard: null,
-      timer: 5,
+      timer: 7,
       isCorrect: null,
       firstFood,
       secondFood,
@@ -129,7 +129,7 @@ class App extends Component {
   newFoods = () => {
     // randomizes new foods
     this.setState({
-      timer: 5,
+      timer: 7,
       showCalories: false
     });
 
@@ -168,7 +168,7 @@ class App extends Component {
     }
 
     this.setState({
-      timer: 5
+      timer: 7
     });
 
     setTimeout(() => {
@@ -296,7 +296,7 @@ class App extends Component {
   playAgain = () => {
     this.setState({
       display: "game on",
-      timer: 5
+      timer: 7
     });
 
     this.newFoods();

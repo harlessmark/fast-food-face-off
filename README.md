@@ -6,8 +6,6 @@ Three web scrapers were used to gather data on fast food restaurants and their f
 
 ## Installing
 
-Your computer should have the latest version of [Ruby](https://www.ruby-lang.org/en/documentation/installation/) installed. Then run the following commands:
-
 Run Bundler
 
 ```
@@ -50,6 +48,7 @@ rails db:seed
 - [Ruby](http://www.yahoo.com) - Backend language
 - [Ruby on Rails](https://rubyonrails.org/) - Ruby web application framework
 - [React](https://reactjs.org/) - Javascript frontend framework
+- [React Bootstrap](https://react-bootstrap.github.io/) - CSS framework
 - [Nokogiri](https://github.com/sparklemotion/nokogiri) - HTML and XML parser
 - [Fast JSON API](https://github.com/Netflix/fast_jsonapi) - Ruby serializer
 

@@ -122,7 +122,7 @@ class Game extends Component {
               {this.props.state.currentGame.score === 8
                 ? "UNFRIGGENBELIEVEABLE"
                 : null}
-              {this.props.state.currentGame.score === 9 ? "COMEBACK" : null}
+              {this.props.state.currentGame.score >= 9 ? "COMEBACK" : null}
             </h3>
           </Col>
         </Row>
