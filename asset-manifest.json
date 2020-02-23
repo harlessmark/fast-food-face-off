@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/fast-food-face-off/static/css/main.3b7c7e7f.chunk.css",
+    "main.js": "/fast-food-face-off/static/js/main.946b0c18.chunk.js",
+    "main.js.map": "/fast-food-face-off/static/js/main.946b0c18.chunk.js.map",
+    "runtime-main.js": "/fast-food-face-off/static/js/runtime-main.04d603d7.js",
+    "runtime-main.js.map": "/fast-food-face-off/static/js/runtime-main.04d603d7.js.map",
+    "static/css/2.17e5ed98.chunk.css": "/fast-food-face-off/static/css/2.17e5ed98.chunk.css",
+    "static/js/2.4b3719af.chunk.js": "/fast-food-face-off/static/js/2.4b3719af.chunk.js",
+    "static/js/2.4b3719af.chunk.js.map": "/fast-food-face-off/static/js/2.4b3719af.chunk.js.map",
+    "index.html": "/fast-food-face-off/index.html",
+    "precache-manifest.ee9821ff9b8e90c425bdeec15541ba49.js": "/fast-food-face-off/precache-manifest.ee9821ff9b8e90c425bdeec15541ba49.js",
+    "service-worker.js": "/fast-food-face-off/service-worker.js",
+    "static/css/2.17e5ed98.chunk.css.map": "/fast-food-face-off/static/css/2.17e5ed98.chunk.css.map",
+    "static/css/main.3b7c7e7f.chunk.css.map": "/fast-food-face-off/static/css/main.3b7c7e7f.chunk.css.map",
+    "static/js/2.4b3719af.chunk.js.LICENSE": "/fast-food-face-off/static/js/2.4b3719af.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.04d603d7.js",
+    "static/css/2.17e5ed98.chunk.css",
+    "static/js/2.4b3719af.chunk.js",
+    "static/css/main.3b7c7e7f.chunk.css",
+    "static/js/main.946b0c18.chunk.js"
+  ]
+}
