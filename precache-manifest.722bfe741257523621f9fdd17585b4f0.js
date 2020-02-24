@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d51c99b787daf2d1788207bf95e3e921",
+    "revision": "e44a47c01bc8528f6ef3b4e740b9378e",
     "url": "/fast-food-face-off/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/fast-food-face-off/static/css/2.17e5ed98.chunk.css"
   },
   {
-    "revision": "625708130f11822c1790",
+    "revision": "6a184feaad724b169846",
     "url": "/fast-food-face-off/static/css/main.3b7c7e7f.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/fast-food-face-off/static/js/2.4b3719af.chunk.js.LICENSE"
   },
   {
-    "revision": "625708130f11822c1790",
-    "url": "/fast-food-face-off/static/js/main.2e87e6f7.chunk.js"
+    "revision": "6a184feaad724b169846",
+    "url": "/fast-food-face-off/static/js/main.e4fa502b.chunk.js"
   },
   {
     "revision": "0758d2df09f76948df50",
