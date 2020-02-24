@@ -90,7 +90,7 @@ class Game extends Component {
                 >
                   {this.props.state.showCalories
                     ? this.props.state.secondFood.attributes.calories
-                    : this.props.state.firstFood.attributes.name}{" "}
+                    : this.props.state.secondFood.attributes.name}{" "}
                   Calories
                 </Card.Title>
                 <Card.Text>
