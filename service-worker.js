@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/fast-food-face-off/precache-manifest.722bfe741257523621f9fdd17585b4f0.js"
+  "/fast-food-face-off/precache-manifest.4282fd6a7b0d1744b121fc1927ec766e.js"
 );
 
 self.addEventListener('message', (event) => {

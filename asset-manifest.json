@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/fast-food-face-off/static/css/main.3b7c7e7f.chunk.css",
-    "main.js": "/fast-food-face-off/static/js/main.e4fa502b.chunk.js",
-    "main.js.map": "/fast-food-face-off/static/js/main.e4fa502b.chunk.js.map",
+    "main.css": "/fast-food-face-off/static/css/main.e6577679.chunk.css",
+    "main.js": "/fast-food-face-off/static/js/main.48bee298.chunk.js",
+    "main.js.map": "/fast-food-face-off/static/js/main.48bee298.chunk.js.map",
     "runtime-main.js": "/fast-food-face-off/static/js/runtime-main.04d603d7.js",
     "runtime-main.js.map": "/fast-food-face-off/static/js/runtime-main.04d603d7.js.map",
     "static/css/2.17e5ed98.chunk.css": "/fast-food-face-off/static/css/2.17e5ed98.chunk.css",
     "static/js/2.4b3719af.chunk.js": "/fast-food-face-off/static/js/2.4b3719af.chunk.js",
     "static/js/2.4b3719af.chunk.js.map": "/fast-food-face-off/static/js/2.4b3719af.chunk.js.map",
     "index.html": "/fast-food-face-off/index.html",
-    "precache-manifest.722bfe741257523621f9fdd17585b4f0.js": "/fast-food-face-off/precache-manifest.722bfe741257523621f9fdd17585b4f0.js",
+    "precache-manifest.4282fd6a7b0d1744b121fc1927ec766e.js": "/fast-food-face-off/precache-manifest.4282fd6a7b0d1744b121fc1927ec766e.js",
     "service-worker.js": "/fast-food-face-off/service-worker.js",
     "static/css/2.17e5ed98.chunk.css.map": "/fast-food-face-off/static/css/2.17e5ed98.chunk.css.map",
-    "static/css/main.3b7c7e7f.chunk.css.map": "/fast-food-face-off/static/css/main.3b7c7e7f.chunk.css.map",
+    "static/css/main.e6577679.chunk.css.map": "/fast-food-face-off/static/css/main.e6577679.chunk.css.map",
     "static/js/2.4b3719af.chunk.js.LICENSE": "/fast-food-face-off/static/js/2.4b3719af.chunk.js.LICENSE"
   },
   "entrypoints": [
     "static/js/runtime-main.04d603d7.js",
     "static/css/2.17e5ed98.chunk.css",
     "static/js/2.4b3719af.chunk.js",
-    "static/css/main.3b7c7e7f.chunk.css",
-    "static/js/main.e4fa502b.chunk.js"
+    "static/css/main.e6577679.chunk.css",
+    "static/js/main.48bee298.chunk.js"
   ]
 }
