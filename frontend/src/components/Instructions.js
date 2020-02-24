@@ -8,7 +8,9 @@ class Instructions extends Component {
       <Container>
         <Row className="justify-content-center">
           <Col sm="auto">
-            <p>– best experienced on a desktop –</p>
+            <p id="small-text">
+              - You may need to play at least 1 game to start the server -
+            </p>
           </Col>
         </Row>
         <Row className="justify-content-center">
