@@ -35,7 +35,7 @@ class Instructions extends Component {
           <Col></Col>
         </Row>
         <Row className="justify-content-center">
-          <Col sm="auto">
+          <Col sm="auto mb-5">
             <Button onClick={this.props.clickHandler}>START GAME</Button>
           </Col>
         </Row>
