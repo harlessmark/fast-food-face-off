@@ -7,7 +7,7 @@
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins 'https://superhackerboy.github.io/fast-food-face-off/'
+    origins 'https://superhackerboy.github.io'
 
     resource '*',
       headers: :any,
