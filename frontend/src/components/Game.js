@@ -104,8 +104,8 @@ class Game extends Component {
           </Col>
         </Row>
         <Row className="justify-content-center">
-          <Col sm="auto">
-            <h3>
+          <Col sm="auto mb-2">
+            <h3 sm="mb-5">
               {this.props.state.currentGame.score === 1
                 ? "KILLING SPREE"
                 : null}

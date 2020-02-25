@@ -6,8 +6,8 @@ class Leaderboard extends Component {
     return (
       <Container>
         <Row>
-          <Col>
-            <ol className="display-4">
+          <Col sm="auto">
+            <ol className="display-5">
               {this.props.leaderboard.map(item => {
                 return (
                   <li key={item.id}>

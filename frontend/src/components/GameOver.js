@@ -23,7 +23,7 @@ class GameOver extends Component {
           </Col>
         </Row>
         <Row className="justify-content-center">
-          <Col sm="atuo">
+          <Col sm="auto mb-5">
             <Button onClick={this.props.playAgain}>Play Again?</Button>
           </Col>
         </Row>
